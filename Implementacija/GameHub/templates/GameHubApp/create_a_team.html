@@ -1,0 +1,61 @@
+<!-- Author: Tadija Goljic 0272/2021 -->
+{% extends 'GameHubApp/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/style_header.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_sign_in_sign_up.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_create_a_team.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_popup.css' %}" type="text/css">
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'JS/popup.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+    Create a team
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row new-post-area justify-content-center">
+            <form class="shrink-new-post-area col-sm-12" method="post" action="{% url 'create_a_team' id_forum %}">
+                {% csrf_token %}
+                <div class="row">
+                    <p class="col-sm-12 create-team-p" style="font-size: 40px; font-weight: bold;">
+                        Create a team for {{ forum_name }}
+                    </p>
+                    <p class="col-sm-4 inputs-p">
+                        Team name:
+                    </p>
+                    <input name="team-name-field" class="col-sm-8 team-name" type="text">
+                </div>
+                <div class="row">
+                    <p class="col-sm-4 inputs-p" style="margin-top: 10px;">Number of players:</p>
+                    {% if number_of_team_members_list %}
+                        <select name="team-num-of-players-field" id="" class="num-of-players col-sm-2 col-lg-1">
+                            {% for num in number_of_team_members_list %}
+                                <option value="{{ num }}">{{ num }}</option>
+                            {% endfor %}
+                        </select>
+                    {% else %}
+                        <input name="team-num-of-players-field" type="text" style="border: none; outline: none; background-color: transparent" readonly value="{{ number_of_team_members }}" class="num-of-players-paragraph col-sm-2 col-lg-1">
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <p class="col-sm-4 description-p">
+                        Team description:
+                    </p>
+                    <textarea class="col-sm-8 team-desc" name="team-description-field" id="" cols="30" rows="5">{{ description }}</textarea>
+                </div>
+                <div class="col-sm-12 create-cancel-button-area">
+                    <button class="new-team-button" type="submit">Create</button>
+                    <button type="button" class="new-team-button-cancel" onclick="location.href='{% url "forum" id_forum %}';">Cancel</button>    
+                </div>
+            </form>
+        </div>
+        <p class="text-center messages">{{ message }}</p>
+    </div>
+{% endblock %}

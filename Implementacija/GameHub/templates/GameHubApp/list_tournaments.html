@@ -1,0 +1,58 @@
+<!-- Author: Nemanja Mićanović 0595/2021 -->
+{% extends 'GameHubApp/base.html' %}
+
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/style_list_tournaments.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_header.css' %}" type="text/css">
+{% endblock %}
+
+{% block title %}
+    {{ forum.name }} - Tournaments
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div id="levaStrana" class="col-sm-3">
+                <h1 id="levaStranaNaslov">{{ forum.name }}</h1>
+                <p id="levaStranaOpis">{{ forum.description }}</p>
+                {% if is_privileged %}
+                    <div class="text-center">
+                        <a href="{% url 'create_tournament' forum.idforum %}">
+                            <button type="button" id="createButton" class="btn btn-lg" style="margin-bottom: 10px">Create Tournament</button>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+            <div id="main" class="col-sm-9">
+                {% for tour, date, time, number_of_joined in tours %}
+                    <a href="{% url 'tournament' forum.idforum tour.idtour %}">
+                        <div class="tour p-0">
+                            <table class="tableTour">
+                                <tr>
+                                    <td class="tdPad" style="width: 15px; min-width: 15px; background-color:{% if tour.status == "IN_PROGRESS" %} #ff2a2a {% else %} lightblue {% endif %};" rowspan="3"></td>
+                                    <td class="tdPad" style="width: 100px; min-width: 100px;"><b>Teams:</b></td>
+                                    <td class="tdPad" style="width: 300px; min-width: 150px;"><b>Name:</b></td>
+                                    <td class="tdPad" style="width: 200px; min-width: 150px;"><b>Start time:</b></td>
+                                    <td class="tdPad" style="width: 150px; min-width: 150px;"><b>Reward:</b></td>
+                                    <td class="tdPad" style="width: 250px; min-width: 150px;"><b>Created by:</b></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" class="tdPad">{{ number_of_joined }}/{{ tour.numberofplaces }}</td>
+                                    <td rowspan="2" class="tdPad">{{ tour.name }}</td>
+                                    <td class="tdPad">{{ date }}</td>
+                                    <td rowspan="2" class="tdPad">{{ tour.rewardvalue }} {{ tour.rewardcurrency }}</td>
+                                    <td rowspan="2" class="tdPad">{{ tour.iduser.iduser.username }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="tdPad">{{ time }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

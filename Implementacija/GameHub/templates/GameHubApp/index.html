@@ -1,0 +1,36 @@
+<!-- Author: Mihajlo Blagojevic 0283/2021 -->
+{% extends 'GameHubApp/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/style_index.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_header.css' %}" type="text/css">
+{% endblock %}
+
+{% block Title %}
+    GameHub
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        {% if check_access_create_forum == 1 %}
+            <div class="row div_maina_1">
+                <div class="col-sm-12 div_iznad_dugmeta_za_dodavanje_foruma">
+                    <a href="{% url 'create_forum' %}"><button class="btn btn-secondary">Create forum</button></a>
+                </div>
+            </div>
+        {% endif %}
+        <div class="row div_maina">
+            <div class="col-sm-12 main_forumi">
+                {% for id_of_forum, name_forum, img_data, ext in forums %}
+                    <div class="div_za_svaki_forum">
+                        <a href="{% url 'forum' id_of_forum %}">
+                            <img src="data:image/{{ ext }}; base64, {{ img_data }}" alt="{{ name_forum }}">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

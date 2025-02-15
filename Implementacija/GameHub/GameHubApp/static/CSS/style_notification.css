@@ -1,0 +1,154 @@
+/* Author: Viktor Mitrovic 0296/2021 */
+
+:root {
+    /* Background colors */
+    --bg-color: #1a1a1b;
+
+    /* Log In button colors */
+    --logo-red: #a2170f;
+    --logo-red-button-hover: #73100b;
+    --logo-letter: white;
+
+    /* GameHub header colors */
+    --gamehub-header-letter: white;
+
+    /* Banner colors */
+    --banner-letter: white;
+
+    /* Post area colors */
+    --post-area-border-color: white;
+
+    /* Create post colors */
+    --create-post-letter: white;
+
+    /* Single post colors */
+    --post-bg-color: #1e2123;
+    --post-border-color: #292c30;
+    --post-hover-bg-color: var(--post-border-color);
+
+    --post-body-letter: #878787;
+    --post-title-letter: white;
+    --post-username-letter: white;
+    --post-like-button-letter: white;
+
+    /* Button area colors */
+
+    --follow-button-hover-bg: #dfdfdf;
+
+
+    /* Single forum button colors */
+
+    --forum-button-bg-color: var(--post-bg-color);
+    --forum-button-border-color: var(--post-border-color);
+    --forum-button-hover-bg-color: var(--post-hover-bg-color);
+
+
+    --forum-button-letter: white;
+}
+
+.notification-container {
+    position: fixed;
+    z-index: 5000;
+    visibility: hidden;
+    background-color: #27292b;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-container-header {
+    color: white;
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-container-header-buttons {
+    display: flex;
+}
+
+.notification-button {
+    background-color: transparent;
+    border: none;
+}
+
+svg.notification-icon {
+    fill: none;
+    stroke: white;
+    width: 25px;
+}
+
+.notification-list {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+
+.notification-link {
+    display: block;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 20px 5px 20px 5px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 5px;
+}
+
+.notification-link:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.team-request-list {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    flex-grow: 1;
+    display: none;
+}
+
+.request-body {
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 20px 5px 20px 5px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.request-body-buttons {
+    display: flex;
+}
+
+.request-body-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+}
+
+.accept-request {
+    color: transparent;
+    text-shadow: 0 0 0 green;
+}
+
+.reject-request {
+    color: transparent;
+    text-shadow: 0 0 0 var(--logo-red);
+}
+
+.logo-red {
+    color: var(--logo-red);
+}

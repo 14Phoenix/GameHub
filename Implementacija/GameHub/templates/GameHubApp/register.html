@@ -1,0 +1,48 @@
+<!-- Author: Tadija Goljic 0272/2021 -->
+{% extends 'GameHubApp/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/style_header.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_sign_in_sign_up.css' %}" type="text/css">
+{% endblock %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <h2 class="text-center white-text">Register</h2> <br>
+            <div id="sign-in-div" class="text-center mx-auto col-sm-12">
+                <form action="register" method="post" style="width: 100%;">
+                    {% csrf_token %}
+                    <div class="row text-start white-text">
+                        <label for="email-field">Email:</label> <br>
+                    </div>
+                    <input id="email-field" name="email-field" class="sign-in-field" type="email" placeholder="email" style="width: 100%;" value="{{ email }}" size=2> <br>
+                    <div class="row text-start white-text">
+                        <label for="username-field">Username:</label> <br>
+                    </div>
+                    <input id="username-field" name="username-field" class="sign-in-field" type="text" placeholder="username" style="width: 100%;" value="{{ username }}"> <br>
+                    <div class="row text-start white-text">
+                        <label for="password-field">Password:</label> <br>
+                    </div>
+                    <input id="password-field" name="password-field" class="sign-in-field" type="password" placeholder="password" style="width: 100%;"> <br>
+                    <div class="row text-start white-text">
+                        <label for="password-again-field">Confirm password:</label> <br>
+                    </div>
+                    <input id="password-again-field" name="password-again-field" class="sign-in-field" type="password" placeholder="password" style="width: 100%;"> <br>
+                    <div class="row text-start white-text">
+                        <label for="description-field">Profile description:</label> <br>
+                    </div>
+                    <textarea id="description-field" name="description-field" cols="60" rows="4" placeholder="profile description" style="width: 100%; resize: none;">{{ description }}</textarea> <br>
+                    <input id="submit-button" class="sign-in-field" type="submit" value="Register">
+                </form>
+            </div>
+        <p class="text-center messages">{{ message }}</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,65 @@
+/* Radio Mihajlo Blagojevic */
+
+:root {
+    --header-main-bg-color: #1a1a1b;
+    --breadcrumb-letter: white;
+    --form--bg-color: rgb(240, 239, 239);
+}
+
+body {
+    background-color: var(--header-main-bg-color) !important;
+}
+
+/* breadcrumbs */
+.div_iznad_breadcrumba{
+    width: 100%;
+    background-color: var(--header-main-bg-color);
+}
+.main ol{
+    background-color: var(--header-main-bg-color);
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.main li{
+    color:var(--breadcrumb-letter);
+    font-size: 15px;
+}
+.main ol a{
+    color:var(--breadcrumb-letter);
+    text-decoration: none;
+}
+.main ol a:hover{
+    text-decoration: none;
+}
+
+.div_iznad_kreiranje_foruma{
+    width: 100%;
+}
+
+/*--------------------------------------*/
+/* forma */
+.main .forma{
+    background-color: var(--form--bg-color);
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.p_prikaz_teksta{
+    text-align: center;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.labela_moguc_broj_igraca{
+    color: gray;
+}
+
+.dugme_u_formi{
+    width: 50%;
+    margin-left: 25%;
+}
+

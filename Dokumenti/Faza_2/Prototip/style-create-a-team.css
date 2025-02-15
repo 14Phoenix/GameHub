@@ -1,0 +1,224 @@
+/* Author: Tadija Goljic */
+
+:root {
+    /* Background colors */
+    --bg-color: #1a1a1b;
+
+    /* Log In button colors */
+    --logo-red: #a2170f;
+    --logo-red-button-hover: #73100b;
+    --logo-letter: white;
+
+    /* GameHub header colors */
+    --gamehub-header-letter: white;
+
+    /* Banner colors */
+    --banner-letter: white;
+
+    /* Post area colors */
+    --post-area-border-color: white;
+
+    /* Create post colors */
+    --create-post-letter: white;
+
+    /* Single post colors */
+    --post-bg-color: #1e2123;
+    --post-border-color: #292c30;
+    --post-hover-bg-color: var(--post-border-color);
+
+
+    --single-post-body-letter: white;
+    --post-title-letter: white;
+    --post-username-letter: white;
+    --post-like-button-letter: white;
+    --post-forum-name-letter: white;
+
+    /* Button area colors */
+
+    --follow-button-hover-bg: #dfdfdf;
+
+    /* Single forum button colors */
+
+    --forum-button-bg-color: var(--post-bg-color);
+    --forum-button-border-color: var(--post-border-color);
+    --forum-button-hover-bg-color: var(--post-hover-bg-color);
+
+
+    --forum-button-letter: white;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.new-post-area {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.shrink-new-post-area {
+    width: 70%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.new-post-headers {
+    color: white;
+    padding: 0px;
+}
+
+.new-post-headers a {
+    color: white;
+    text-decoration: none;
+}
+
+.new-post-headers a:hover {
+    text-decoration: underline;
+}
+
+.new-post-title, .new-post-body, .team-desc, .team-name {
+
+    border: 1px solid white;
+    border-radius: 5px;
+
+    color: var(--single-post-body-letter);
+    background-color: var(--post-bg-color);
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    resize: none;
+}
+
+.post-cancel-button-area {
+    padding: 0px;
+    margin-top: 5px;
+}
+
+.new-team-button {
+    border: 1px solid;
+    border-color: var(--logo-red);
+    border-radius: 20px;
+
+    color: var(--post-like-button-letter);
+    background-color: var(--logo-red);
+
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    user-select: none;
+}
+
+.join-button {
+    border: 1px solid;
+    border-color: var(--logo-red);
+    border-radius: 20px;
+
+    color: var(--post-like-button-letter);
+    background-color: var(--logo-red);
+
+    padding: 8px;
+
+    font-size: 15px;
+
+    user-select: none;
+}
+
+.new-team-button:hover, .join-button:hover {
+    background-color: var(--logo-red-button-hover);
+}
+
+.new-team-button-cancel {
+    border: 1px solid;
+    border-color: white;
+    border-radius: 20px;
+
+    color: var(--logo-red);
+    background-color: white;
+
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    user-select: none;
+}
+
+.new-team-button-cancel:hover {
+    background-color: var(--follow-button-hover-bg);
+}
+
+.inputs-p, .description-p {
+    font-size: 28px;
+    color: white;
+}
+
+.create-team-p {
+    color: white;
+}
+
+.num-of-players {
+    color: white;
+    background-color: var(--post-bg-color);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.team {
+    color: white;    /* wheat */
+    background-color: #1a1a1b;
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 10px;
+    user-select: none;
+}
+
+.team-info {
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.game-team {
+    color: white;    /* wheat */
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    user-select: none;
+}
+
+.bgMain {
+    background-color: #2d2d30;
+    padding: 10px;
+    border-right: 4px white solid;
+}
+
+.tdPad {
+    padding: 0;
+}
+
+.filterMain {
+    background-color: #2d2d30;
+}
+
+.filterText {
+    color: white;    /* wheat */
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 10px;
+    user-select: none;
+}
+
+.labelFilter {
+    color: white;
+    padding-right: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif   /* Verdana */
+}
+
+.findTeamField {
+    width: 50%;
+    display: inline;
+    border: 1px solid #a2170f;
+}

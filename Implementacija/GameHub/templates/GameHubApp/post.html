@@ -1,0 +1,261 @@
+<!-- Author: Viktor Mitrovic 0296/2021 -->
+
+{% extends 'GameHubApp/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/style_popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_forum.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_post.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_header.css' %}" type="text/css">
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'JS/popup.js' %}"></script>
+    <script src="{% static 'JS/post.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+        <!-- Post area + Button area -->
+        <div class="row justify-content-center">
+
+            <!-- Post area -->
+            <div class="col-sm-12 col-lg-9">
+                <div class="row single-post-area">
+
+                    <div class="single-post">
+                        <a id="post_forum" href="{% url 'forum' forum.idforum %}" class="single-post-forum-name">{{ forum.name }}</a>
+                        <br>
+                    
+                        {% if post.iduser.is_active %}
+                            
+                            <a class="single-post-username" href="{% url 'user_profile' post.iduser.iduser %}">{{ post.iduser.username }}</a>
+                            
+                        {% else %}
+                    
+                            <a class="post-username" href="{% url 'user_profile' post.iduser.iduser %}" style="pointer-events: none">[deleted user]</a>
+                    
+                        {% endif %}
+                    
+                        <h2 class="single-post-title">{{ post.title }}</h2>
+                    
+                        {% if post.body is not None %}
+                            
+                            <p class="single-post-body">
+                                {{ post.body }}
+                            </p>
+                            
+                        {% endif %}
+
+                        {% if post_liked %}
+
+                            <button id="single_post_like_button" class="single-post-like-button" data-gamehub-single-post-like-button="{% url 'like_post' forum.idforum post.idpost %}">
+                                <svg class="single-post-liked-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0"></g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path d="M7.47998 18.35L10.58 20.75C10.98 21.15 11.88 21.35 12.48 21.35H16.28C17.48 21.35 18.78 20.45 19.08 19.25L21.48 11.95C21.98 10.55 21.08 9.34997 19.58 9.34997H15.58C14.98 9.34997 14.48 8.84997 14.58 8.14997L15.08 4.94997C15.28 4.04997 14.68 3.04997 13.78 2.74997C12.98 2.44997 11.98 2.84997 11.58 3.44997L7.47998 9.54997" stroke="transparent" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                        <path d="M2.38 18.35V8.55002C2.38 7.15002 2.98 6.65002 4.38 6.65002H5.38C6.78 6.65002 7.38 7.15002 7.38 8.55002V18.35C7.38 19.75 6.78 20.25 5.38 20.25H4.38C2.98 20.25 2.38 19.75 2.38 18.35Z" stroke="transparent" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </button>
+
+                        {% else %}
+
+                            <button id="single_post_like_button" class="single-post-like-button" data-gamehub-single-post-like-button="{% url 'like_post' forum.idforum post.idpost %}">
+                                <svg class="single-post-like-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0"></g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path d="M7.47998 18.35L10.58 20.75C10.98 21.15 11.88 21.35 12.48 21.35H16.28C17.48 21.35 18.78 20.45 19.08 19.25L21.48 11.95C21.98 10.55 21.08 9.34997 19.58 9.34997H15.58C14.98 9.34997 14.48 8.84997 14.58 8.14997L15.08 4.94997C15.28 4.04997 14.68 3.04997 13.78 2.74997C12.98 2.44997 11.98 2.84997 11.58 3.44997L7.47998 9.54997" stroke="white" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                        <path d="M2.38 18.35V8.55002C2.38 7.15002 2.98 6.65002 4.38 6.65002H5.38C6.78 6.65002 7.38 7.15002 7.38 8.55002V18.35C7.38 19.75 6.78 20.25 5.38 20.25H4.38C2.98 20.25 2.38 19.75 2.38 18.35Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </button>
+
+                        {% endif %}
+
+                        {% if post.iduser == user or is_admin or is_moderator %}
+
+                            <button id="single_post_delete_button" class="single-post-delete-button" data-gamehub-delete-post-button="{% url 'delete_post' forum.idforum post.idpost %}" data-gamehub-forum-url="{% url 'forum' forum.idforum %}">
+                                <svg class="single-post-delete-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0"></g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g >
+                                        <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M18.85 9.14001L18.2 19.21C18.09 20.78 18 22 15.21 22H8.79002C6.00002 22 5.91002 20.78 5.80002 19.21L5.15002 9.14001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M10.33 16.5H13.66" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M9.5 12.5H14.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </button>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+            
+                <div id="leave_a_comment_wrapper" class="leave-a-comment-button-wrapper">
+                    {% if user.is_authenticated %}
+                        <button id="leave_a_comment_button" class="leave-a-comment-button" data-gamehub-signed-in="True" data-gamehub-sign-in-url="{% url 'sign_in' %}">
+                            Leave a comment
+                        </button>
+                    {% else %}
+                        <button id="leave_a_comment_button" class="leave-a-comment-button" data-gamehub-signed-in="False" data-gamehub-sign-in-url="{% url 'sign_in' %}">
+                            Leave a comment
+                        </button>
+                    {% endif %}
+                </div>
+                
+                <div id="comment_section" class="row comment-section">
+                
+                    <div id="leave_a_comment_carrier" class="leave-a-comment-carrier">
+                        <textarea id="comment_body" class="leave-a-comment-input-body" rows="7"></textarea>
+                        <div id="create_comment_buttons" class="create-comment-buttons">
+                            <div>
+                                <button id="cancel_leave_a_comment" class="leave-a-comment-cancel">Cancel</button>
+                                <button id="post_comment_button" class="leave-a-comment-button" data-gamehub-create-comment-url="{% url 'create_comment' forum.idforum post.idpost %}">Post comment</button>    
+                            </div>
+                        </div>
+                    </div>
+
+                    {% for comment in comments %}
+
+                        <div class="comment">
+                        
+                            {% if comment.iduser.is_active %}
+                        
+                                <a class="comment-username" href="{% url 'user_profile' comment.iduser.iduser %}">{{ comment.iduser.username }}</a>
+                        
+                            {% else %}
+                        
+                                <a class="comment-username" href="{% url 'user_profile' comment.iduser.iduser %}" style="pointer-events: none">[deleted user]</a>
+                        
+                            {% endif %}
+                        
+                            <p class="comment-body">
+                                {{ comment.body }}
+                            </p>
+
+                            {% if comment in liked_comments %}
+
+                                <button class="single-post-like-button" data-gamehub-comment-like-button="{% url 'like_comment' forum.idforum post.idpost comment.idcom %}">
+                                    <svg class="single-post-liked-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke-width="0"></g>
+                                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g>
+                                            <path d="M7.47998 18.35L10.58 20.75C10.98 21.15 11.88 21.35 12.48 21.35H16.28C17.48 21.35 18.78 20.45 19.08 19.25L21.48 11.95C21.98 10.55 21.08 9.34997 19.58 9.34997H15.58C14.98 9.34997 14.48 8.84997 14.58 8.14997L15.08 4.94997C15.28 4.04997 14.68 3.04997 13.78 2.74997C12.98 2.44997 11.98 2.84997 11.58 3.44997L7.47998 9.54997" stroke="transparent" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                            <path d="M2.38 18.35V8.55002C2.38 7.15002 2.98 6.65002 4.38 6.65002H5.38C6.78 6.65002 7.38 7.15002 7.38 8.55002V18.35C7.38 19.75 6.78 20.25 5.38 20.25H4.38C2.98 20.25 2.38 19.75 2.38 18.35Z" stroke="transparent" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+
+                            {% else %}
+
+                                <button class="single-post-like-button" data-gamehub-comment-like-button="{% url 'like_comment' forum.idforum post.idpost comment.idcom %}">
+                                    <svg class="single-post-like-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke-width="0"></g>
+                                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g>
+                                            <path d="M7.47998 18.35L10.58 20.75C10.98 21.15 11.88 21.35 12.48 21.35H16.28C17.48 21.35 18.78 20.45 19.08 19.25L21.48 11.95C21.98 10.55 21.08 9.34997 19.58 9.34997H15.58C14.98 9.34997 14.48 8.84997 14.58 8.14997L15.08 4.94997C15.28 4.04997 14.68 3.04997 13.78 2.74997C12.98 2.44997 11.98 2.84997 11.58 3.44997L7.47998 9.54997" stroke="white" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                            <path d="M2.38 18.35V8.55002C2.38 7.15002 2.98 6.65002 4.38 6.65002H5.38C6.78 6.65002 7.38 7.15002 7.38 8.55002V18.35C7.38 19.75 6.78 20.25 5.38 20.25H4.38C2.98 20.25 2.38 19.75 2.38 18.35Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+
+                            {% endif %}
+                        
+                            {% if comment.iduser == user or is_admin or is_moderator %}
+                        
+                                <button class="single-post-delete-button" data-gamehub-delete-comment-button="{% url 'delete_comment' forum.idforum post.idpost comment.idcom %}">
+                                    <svg class="single-post-delete-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke-width="0"></g>
+                                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g >
+                                            <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M18.85 9.14001L18.2 19.21C18.09 20.78 18 22 15.21 22H8.79002C6.00002 22 5.91002 20.78 5.80002 19.21L5.15002 9.14001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M10.33 16.5H13.66" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M9.5 12.5H14.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                        
+                            {% endif %}
+                        
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+            <!-- Button area -->
+            {% if has_tournaments %}
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="row forum-button-area sticky-top">
+
+                    <a class="forum-button" href="{% url 'find_a_team' forum.idforum %}">Find a team</a>
+
+                    {% if team_member %}
+                        
+                        <button id="create_team_button" class="forum-button" data-gamehub-popup-button="leave_team">Create a team</button>
+                        
+                        <a class="forum-button" href="{% url 'team' forum.idforum team.idteam %}">My team</a>
+
+                    {% else %}
+                        
+                        <a class="forum-button" href="{% url 'create_a_team' forum.idforum %}">Create a team</a>
+                        
+                        <a class="forum-button" href="{% url 'find_a_team' forum.idforum %}">My team</a>
+                    
+                    {% endif %}
+
+                    <a class="forum-button" href="{% url 'list_tournaments' forum.idforum %}">Tournaments</a>
+
+                </div>
+            </div>
+            {% endif %}
+
+        </div>
+
+    </div>
+    
+    {% if user.is_authenticated and team_member %}
+        
+        <div class="popup" data-gamehub-popup="leave_team">
+            <div class="popup-body">
+                <div class="popup-header">
+                    <div class="popup-title">
+                        Leave a team
+                    </div>
+                    <div>
+                        <button class="popup-close" data-gamehub-popup-close="leave_team">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <form id="form_leave_team" class="popup-content" method="post" action="{% url 'leave_a_team' forum.idforum %}">
+                    {% csrf_token %}
+                    <div class="popup-form-buttons">
+                        <button type="button" class="popup-form-button cancel" data-gamehub-popup-close="leave_team">Cancel</button>
+                        <button class="popup-form-button confirm" data-gamehub-popup-close="leave_team">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    {% endif %}
+
+{% endblock %}

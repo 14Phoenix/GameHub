@@ -1,0 +1,48 @@
+/* Author: Mihajlo Blagojevic 0283/2021 */
+
+:root {
+    --header-main-bg-color: #1a1a1b;
+}
+
+body {
+    background-color: var(--header-main-bg-color) !important;
+}
+.div_maina_1{
+    height: 55px;
+    width: 100%;
+}
+.div_iznad_dugmeta_za_dodavanje_foruma button{
+    width: 150px;
+    font-size: 15px;
+    border-radius: 25px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+/*--------------------------------------*/
+.div_maina{
+    width: 100%;
+}
+
+.main_forumi{
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main_forumi div{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px;
+    flex-basis: 150px;
+}
+.main_forumi img{
+    height: 100%;
+    width: 100%;
+}
+
+.div_za_svaki_forum {
+    height: 200px;
+}

@@ -1,0 +1,70 @@
+/* Author: Tadija Goljic */
+
+:root {
+
+    /* Background colors */
+    --bg-color: #1a1a1b;
+
+    /* Log In button colors */
+    --logo-red: #a2170f;
+    --logo-red-button-hover: #73100b;
+    --logo-letter: white;
+
+    /* GameHub header colors */
+    --gamehub-header-letter: white;
+
+    /* Banner colors */
+    --banner-letter: white;
+
+    /* Post area colors */
+    --post-area-border-color: white;
+
+    /* Create post colors */
+    --create-post-letter: white;
+
+    /* Single post colors */
+    --post-bg-color: #1e2123;
+    --post-border-color: #292c30;
+    --post-hover-bg-color: var(--post-border-color);
+
+    --post-body-letter: #878787;
+    --post-title-letter: white;
+    --post-username-letter: white;
+    --post-like-button-letter: white;
+
+    /* Single forum button colors */
+
+    --forum-button-bg-color: var(--post-bg-color);
+    --forum-button-border-color: var(--post-border-color);
+    --forum-button-hover-bg-color: var(--post-hover-bg-color);
+    
+    --forum-button-letter: white;
+
+}
+
+#submit-button {
+    background-color: var(--logo-red);
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+#sign-in-div {
+    background-color: var(--post-bg-color);
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 20%;
+}
+
+.field, .submit_button_sign_in {
+    margin-bottom: 8px;
+}
+
+.white-text {
+    color: white;
+}
+
+.body {
+    background-color: var(--bg-color);
+}

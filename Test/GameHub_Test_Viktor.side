@@ -1,0 +1,3228 @@
+{
+  "id": "1576c207-d962-4413-809a-95c6ab30eb8d",
+  "version": "2.0",
+  "name": "GameHub_Test_Viktor",
+  "url": "http://localhost:8000",
+  "tests": [{
+    "id": "e74e3d94-ad09-471c-989b-92bfde25d70d",
+    "name": "SSU_25_2.2.3_TournamentUpdateScore",
+    "commands": [{
+      "id": "cc987432-9ec2-4080-b867-105717ce8514",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5478e979-ec72-4078-a0b5-ca3dc2d9420a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94b693a8-d6c8-402f-b1df-bee549476d39",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign_in_button",
+      "targets": [
+        ["id=sign_in_button", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#sign_in_button", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='sign_in_button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/sign-in')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eff30646-dc60-4828-9480-c31cef801efb",
+      "comment": "",
+      "command": "click",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c4b8a9e-388f-40b9-b023-1a4dd0ba8bfe",
+      "comment": "",
+      "command": "type",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "viktor"
+    }, {
+      "id": "294fd180-f24e-4a31-ba97-2dbcd2add3f9",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f944860-d47b-4580-8d65-8106288715f9",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "morpheus"
+    }, {
+      "id": "72541cbc-624e-4f5b-9b0b-e9b9d36f6f17",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-button",
+      "targets": [
+        ["id=submit-button", "id"],
+        ["css=#submit-button", "css:finder"],
+        ["xpath=//input[@id='submit-button']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5654a34-0133-49bb-a30d-b56857ad90ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.div_za_svaki_forum:nth-child(4) img",
+      "targets": [
+        ["css=.div_za_svaki_forum:nth-child(4) img", "css:finder"],
+        ["xpath=//img[@alt='Fortnite']", "xpath:img"],
+        ["xpath=//div[4]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8653d5d-d129-4d94-8267-9f0ed16e6b4b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tournaments",
+      "targets": [
+        ["linkText=Tournaments", "linkText"],
+        ["css=.forum-button:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Tournaments')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/forum/1/list-tournaments')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Tournaments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f54e4e4-d69b-4587-9ac4-989800a69649",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(2) tr:nth-child(2) > .tdPad:nth-child(2)",
+      "targets": [
+        ["css=a:nth-child(2) tr:nth-child(2) > .tdPad:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main']/a[2]/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//a[2]/div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Fortnite for pro players')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da265463-81a1-4b60-a95d-606fb84ce502",
+      "comment": "",
+      "command": "click",
+      "target": "id=startTour",
+      "targets": [
+        ["id=startTour", "id"],
+        ["css=#startTour", "css:finder"],
+        ["xpath=//button[@id='startTour']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/form/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Start Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6640b2ca-1fa7-4f47-b639-be98e04bf69b",
+      "comment": "",
+      "command": "click",
+      "target": "id=tour_event_submit_button",
+      "targets": [
+        ["id=tour_event_submit_button", "id"],
+        ["name=start", "name"],
+        ["css=#tour_event_submit_button", "css:finder"],
+        ["xpath=//button[@id='tour_event_submit_button']", "xpath:attributes"],
+        ["xpath=//div[3]/div/form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4179048-4186-436b-a6dc-2bfc5a70b05b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#\\30_1 > span:nth-child(3)",
+      "targets": [
+        ["css=#\\30_1 > span:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='0_1']/span[3]", "xpath:idRelative"],
+        ["xpath=//tr[3]/td/div/span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58878bff-32bc-4799-9b59-907fb7ba47a4",
+      "comment": "",
+      "command": "click",
+      "target": "name=points",
+      "targets": [
+        ["name=points", "name"],
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@name='points']", "xpath:attributes"],
+        ["xpath=//form[@id='form_edit_team']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c63bd172-fbde-49d5-82fd-27163af38080",
+      "comment": "",
+      "command": "type",
+      "target": "name=points",
+      "targets": [
+        ["name=points", "name"],
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@name='points']", "xpath:attributes"],
+        ["xpath=//form[@id='form_edit_team']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "659f1d7b-65de-4cd8-83ee-3f88f05b6091",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-form-buttons:nth-child(3) > .confirm",
+      "targets": [
+        ["css=.popup-form-buttons:nth-child(3) > .confirm", "css:finder"],
+        ["xpath=//form[@id='form_edit_team']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add points')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fbc3744-b7ed-4192-95d9-6088d7745e2e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#\\30_0 > span:nth-child(3)",
+      "targets": [
+        ["css=#\\30_0 > span:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='0_0']/span[3]", "xpath:idRelative"],
+        ["xpath=//span[3]", "xpath:position"],
+        ["xpath=//span[contains(.,'10')]", "xpath:innerText"]
+      ],
+      "value": "10"
+    }, {
+      "id": "3e5759f5-aefd-49c5-a728-4bae3b5492a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#SVGRepo_iconCarrier_profile > path:nth-child(1)",
+      "targets": [
+        ["css=#SVGRepo_iconCarrier_profile > path:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "8df2456b-154b-4951-a79a-8ee9ff970d79",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-out-button",
+      "targets": [
+        ["css=.sign-out-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2119f16-6ecb-4e79-ba4d-6473a7b02478",
+      "comment": "",
+      "command": "click",
+      "target": "css=#form_sign_out .confirm",
+      "targets": [
+        ["css=#form_sign_out .confirm", "css:finder"],
+        ["xpath=//input[@value='Sign out']", "xpath:attributes"],
+        ["xpath=//div[@id='add_moderator_buttons']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e2dc1b2-8407-4f65-ba06-2a5f981e5212",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "52f7a47a-38a5-4e47-8754-8a2742ad2e92",
+    "name": "SSU_25_2.2.4_TournamentPromoteTeam",
+    "commands": [{
+      "id": "79d0a140-1e74-4df0-99ac-c26480252b30",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6e2048e-1886-41e2-a27b-7ed236ee8147",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01204d9b-cadd-401a-9209-b1ef76bc3caf",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign_in_button",
+      "targets": [
+        ["id=sign_in_button", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#sign_in_button", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='sign_in_button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/sign-in')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93b77492-3145-4064-8ad0-0e7f4a30eeaf",
+      "comment": "",
+      "command": "click",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c53f7642-5ef9-4883-b1cd-9b4f0eece2d1",
+      "comment": "",
+      "command": "type",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "viktor"
+    }, {
+      "id": "6d1346aa-80e3-44cc-b4b3-5cb105da0060",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "00702041-1ae6-43a9-a9e5-ae3d55de8f63",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "morpheus"
+    }, {
+      "id": "743d152f-8b5e-4988-bd14-777b097eb0fb",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "9bb551f3-c82c-47c0-be5a-f9a487fa0893",
+      "comment": "",
+      "command": "click",
+      "target": "css=.div_za_svaki_forum:nth-child(5) img",
+      "targets": [
+        ["css=.div_za_svaki_forum:nth-child(5) img", "css:finder"],
+        ["xpath=//img[@alt='League of Legends']", "xpath:img"],
+        ["xpath=//div[5]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "efe8ffd7-39c2-4dc1-9f21-7ac8e09d5227",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tournaments",
+      "targets": [
+        ["linkText=Tournaments", "linkText"],
+        ["css=.forum-button:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Tournaments')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/forum/7/list-tournaments')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Tournaments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bada7cb9-6760-4c0a-a770-30a69e329201",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(2) tr:nth-child(2) > .tdPad:nth-child(2)",
+      "targets": [
+        ["css=a:nth-child(2) tr:nth-child(2) > .tdPad:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main']/a[2]/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//a[2]/div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'LOL Pros Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef7979b9-7b3a-4244-8b8e-44b3ad6836d0",
+      "comment": "",
+      "command": "click",
+      "target": "id=startTour",
+      "targets": [
+        ["id=startTour", "id"],
+        ["css=#startTour", "css:finder"],
+        ["xpath=//button[@id='startTour']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/form/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Start Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7734871f-74cb-4ca1-9930-ca1b9f58a536",
+      "comment": "",
+      "command": "click",
+      "target": "id=tour_event_submit_button",
+      "targets": [
+        ["id=tour_event_submit_button", "id"],
+        ["name=start", "name"],
+        ["css=#tour_event_submit_button", "css:finder"],
+        ["xpath=//button[@id='tour_event_submit_button']", "xpath:attributes"],
+        ["xpath=//div[3]/div/form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ea33ff4-7218-4b9d-83a7-dc4044a4af2a",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=#\\30_0 > span:nth-child(2)",
+      "targets": [
+        ["css=#\\30_0 > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='0_0']/span[2]", "xpath:idRelative"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Inferno Blades')]", "xpath:innerText"]
+      ],
+      "value": "promoted_team"
+    }, {
+      "id": "eeed972e-3d85-4ca7-90d6-0b10d56ff354",
+      "comment": "",
+      "command": "click",
+      "target": "css=#\\30_0 > span:nth-child(2)",
+      "targets": [
+        ["css=#\\30_0 > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='0_0']/span[2]", "xpath:idRelative"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Inferno Blades')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ad28051-04bb-4dd0-a8e8-2e4383f0abfc",
+      "comment": "",
+      "command": "click",
+      "target": "name=points",
+      "targets": [
+        ["name=points", "name"],
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@name='points']", "xpath:attributes"],
+        ["xpath=//form[@id='form_edit_team']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "688b7de6-7a51-435e-bdda-d7921c836901",
+      "comment": "",
+      "command": "type",
+      "target": "name=points",
+      "targets": [
+        ["name=points", "name"],
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@name='points']", "xpath:attributes"],
+        ["xpath=//form[@id='form_edit_team']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "9078f2b1-04aa-4212-8df4-eefdc08ca55b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.popup-form-buttons:nth-child(3) > .confirm",
+      "targets": [
+        ["css=.popup-form-buttons:nth-child(3) > .confirm", "css:finder"],
+        ["xpath=//form[@id='form_edit_team']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add points')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbaf3042-3cc3-46be-b744-c9533e2a79cf",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#\\31_0 > span:nth-child(2)",
+      "targets": [
+        ["css=#\\31_0 > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='1_0']/span[2]", "xpath:idRelative"],
+        ["xpath=//td[2]/div/span[2]", "xpath:position"]
+      ],
+      "value": "${promoted_team}"
+    }, {
+      "id": "658aee8e-a76a-4f44-9e9f-9403f67fdcb3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.profile-icon",
+      "targets": [
+        ["css=.profile-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e39bdeb-d095-4fbb-a61b-5a5eb5851a7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-out-button",
+      "targets": [
+        ["css=.sign-out-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cd3ee71-5e2c-4cee-b9de-994374e2eea9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#form_sign_out .confirm",
+      "targets": [
+        ["css=#form_sign_out .confirm", "css:finder"],
+        ["xpath=//input[@value='Sign out']", "xpath:attributes"],
+        ["xpath=//div[@id='add_moderator_buttons']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04b1dd2e-1031-43b3-b543-4808ff63ddb0",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0924ae4e-8eb2-40f9-8b90-04df782d4b0d",
+    "name": "SSU_19_2.2.1_LeaveTeam",
+    "commands": [{
+      "id": "a38c294e-3255-4ed1-8330-96d305dce615",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c215fa7-a538-4e5e-89bd-937650963f54",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8968e7a-1803-42af-a6c1-7fe42bbad543",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign_in_button",
+      "targets": [
+        ["id=sign_in_button", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#sign_in_button", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='sign_in_button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/sign-in')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "497de289-6840-40a1-a277-0f2b3ee6d7bf",
+      "comment": "",
+      "command": "click",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "665d774a-9fe5-4ed2-9a7c-b293cf2a88f7",
+      "comment": "",
+      "command": "type",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "viktor"
+    }, {
+      "id": "79ae92a2-3f9c-4380-a42d-98e1e111dc5c",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1473cce-cfb9-4747-ad2a-7de1e850facf",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "morpheus"
+    }, {
+      "id": "082b7bce-9c0d-4d6f-9262-4c3e6b78e39b",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-button",
+      "targets": [
+        ["id=submit-button", "id"],
+        ["css=#submit-button", "css:finder"],
+        ["xpath=//input[@id='submit-button']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "516961a1-0161-41b3-ae3d-ef916cff261f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.div_za_svaki_forum:nth-child(4) img",
+      "targets": [
+        ["css=.div_za_svaki_forum:nth-child(4) img", "css:finder"],
+        ["xpath=//img[@alt='Fortnite']", "xpath:img"],
+        ["xpath=//div[4]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a6266fa-0923-4386-b5b0-32dbf61c4843",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=My team",
+      "targets": [
+        ["linkText=My team", "linkText"],
+        ["css=.forum-button:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'My team')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/forum/1/team/49')]", "xpath:href"],
+        ["xpath=//div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'My team')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cc91504-a717-4eaa-a6d4-a8fd5de238d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.team-leave-a-team-button",
+      "targets": [
+        ["css=.team-leave-a-team-button", "css:finder"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Leave')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c95bbdc-00ba-44ec-ac74-ac910fd30222",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=My team",
+      "targets": [
+        ["linkText=My team", "linkText"],
+        ["css=.forum-button:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'My team')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/forum/1/find-a-team')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'My team')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14519ad5-24b1-4736-8ffe-34a0715583ea",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.game-team",
+      "targets": [
+        ["css=.game-team", "css:finder"],
+        ["xpath=//div/h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Find a team for Fortnite')]", "xpath:innerText"]
+      ],
+      "value": "Find a team for Fortnite"
+    }, {
+      "id": "c6c744df-1981-4403-ade2-e353e216e7c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.profile-icon",
+      "targets": [
+        ["css=.profile-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f71e1c00-1bf0-40eb-a63e-252c60c47260",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-out-button",
+      "targets": [
+        ["css=.sign-out-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "003b7a10-62f0-485c-a903-dc4589cca443",
+      "comment": "",
+      "command": "click",
+      "target": "css=#form_sign_out .confirm",
+      "targets": [
+        ["css=#form_sign_out .confirm", "css:finder"],
+        ["xpath=//input[@value='Sign out']", "xpath:attributes"],
+        ["xpath=//div[@id='add_moderator_buttons']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf441eaa-dc69-4454-a85b-45fb4db97be9",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1f14742a-66f8-469e-aa2b-6451d8bf2a21",
+    "name": "SSU_20_2.2.1_CreateTournament",
+    "commands": [{
+      "id": "8b41de05-cff0-408d-b774-7fff8e676a93",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6bf74e04-079d-49a5-8876-0d12579335ad",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19d747fd-1d87-4b27-a0e4-fa0bd97c0c4c",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign_in_button",
+      "targets": [
+        ["id=sign_in_button", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#sign_in_button", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='sign_in_button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/sign-in')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "38a9ad27-ad48-4b41-821f-aea9ba6aa2f1",
+      "comment": "",
+      "command": "click",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "615b49b2-60ed-4b12-8a43-7a0bcb6ca9c7",
+      "comment": "",
+      "command": "type",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "viktor"
+    }, {
+      "id": "5e06147d-4560-4233-93f7-f135254db231",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2d98f61-137a-4780-83fa-684cbe42d887",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "morpheus"
+    }, {
+      "id": "1cb97efc-a725-4c8a-b635-7c0b117b3952",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-button",
+      "targets": [
+        ["id=submit-button", "id"],
+        ["css=#submit-button", "css:finder"],
+        ["xpath=//input[@id='submit-button']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a85d1f3-a1b3-47fc-a963-c4b10eff9c50",
+      "comment": "",
+      "command": "click",
+      "target": "css=.div_za_svaki_forum:nth-child(7) img",
+      "targets": [
+        ["css=.div_za_svaki_forum:nth-child(7) img", "css:finder"],
+        ["xpath=//img[@alt='PUBG: Battlegrounds']", "xpath:img"],
+        ["xpath=//div[7]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1f3eef7-9ac5-4a0e-be29-ae3f5eeab487",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tournaments",
+      "targets": [
+        ["linkText=Tournaments", "linkText"],
+        ["css=.forum-button:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Tournaments')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/forum/9/list-tournaments')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Tournaments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "016801c7-2af5-42c2-86ab-d48ed9c4b46e",
+      "comment": "",
+      "command": "click",
+      "target": "id=createButton",
+      "targets": [
+        ["id=createButton", "id"],
+        ["css=#createButton", "css:finder"],
+        ["xpath=//button[@id='createButton']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/div/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd0fa5db-6c96-4e38-917c-5348513a9023",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_name",
+      "targets": [
+        ["name=tour_name", "name"],
+        ["css=tr:nth-child(1) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_name']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e93ce75-aaa2-4c7d-9eff-591b4a5f9194",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_name",
+      "targets": [
+        ["name=tour_name", "name"],
+        ["css=tr:nth-child(1) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_name']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "PUBG Tournament"
+    }, {
+      "id": "908b62d7-f053-4f6c-bd1a-17b22ee9ba2a",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_date",
+      "targets": [
+        ["name=tour_date", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_date']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d59067d3-8fb8-4f0c-a6f9-68be77a428e3",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_date",
+      "targets": [
+        ["name=tour_date", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_date']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": "2024-08-11"
+    }, {
+      "id": "bbf86268-c7bc-4934-b7b6-b811d36c0889",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_time",
+      "targets": [
+        ["name=tour_time", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_time']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3d30d67-8317-46da-9dd1-fd884502f11b",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_time",
+      "targets": [
+        ["name=tour_time", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_time']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "02:13"
+    }, {
+      "id": "1079bdd9-ce8f-4bfc-abb3-8e3f9cafbb5e",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_players_per_team",
+      "targets": [
+        ["name=tour_players_per_team", "name"],
+        ["css=tr:nth-child(3) .tekstPolje", "css:finder"],
+        ["xpath=//select[@name='tour_players_per_team']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[3]/td[2]/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28932b73-0bd0-423a-a830-d61478b2434c",
+      "comment": "",
+      "command": "select",
+      "target": "name=tour_players_per_team",
+      "targets": [],
+      "value": "label=2 players"
+    }, {
+      "id": "d5195bef-1730-47c6-9929-8daf8d3a603f",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_num_of_places",
+      "targets": [
+        ["name=tour_num_of_places", "name"],
+        ["css=tr:nth-child(4) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_num_of_places']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[4]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a06a187c-5a71-48f6-9d19-f9fdd08a8058",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_num_of_places",
+      "targets": [
+        ["name=tour_num_of_places", "name"],
+        ["css=tr:nth-child(4) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_num_of_places']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[4]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": "16"
+    }, {
+      "id": "831368aa-69ae-4690-a73c-7b4072a23c12",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_format",
+      "targets": [
+        ["name=tour_format", "name"],
+        ["css=tr:nth-child(5) .tekstPolje", "css:finder"],
+        ["xpath=//select[@name='tour_format']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[5]/td[2]/div/select", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b3e3ed0-97aa-426d-9483-bde2f9a0bae9",
+      "comment": "",
+      "command": "select",
+      "target": "name=tour_format",
+      "targets": [],
+      "value": "label=Best of 3"
+    }, {
+      "id": "dd095bdd-ca4b-4183-ab96-8398b66dc74d",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_value",
+      "targets": [
+        ["name=tour_value", "name"],
+        ["css=tr:nth-child(6) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_value']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a17d42c9-6811-4cd2-8c33-374bc9396bbd",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_value",
+      "targets": [
+        ["name=tour_value", "name"],
+        ["css=tr:nth-child(6) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_value']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "039ca9b1-18bd-48a0-936e-da0c2bfb6193",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_currency",
+      "targets": [
+        ["name=tour_currency", "name"],
+        ["css=.mx-auto:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_currency']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c882cd37-0aa5-4aa1-8b0c-b64801c113c2",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_currency",
+      "targets": [
+        ["name=tour_currency", "name"],
+        ["css=.mx-auto:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_currency']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": "$"
+    }, {
+      "id": "2eb02c08-a6e2-4d25-9074-639b2e3d86bc",
+      "comment": "",
+      "command": "click",
+      "target": "id=createButton",
+      "targets": [
+        ["id=createButton", "id"],
+        ["css=#createButton", "css:finder"],
+        ["xpath=//button[@id='createButton']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c993123-3031-4c08-8ec8-6e3e7376dd4f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > .tdPad:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(2) > .tdPad:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main']/a/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'PUBG Tournament')]", "xpath:innerText"]
+      ],
+      "value": "PUBG Tournament"
+    }, {
+      "id": "f783ac28-70d7-4c92-8ca4-b32c6cf76050",
+      "comment": "",
+      "command": "click",
+      "target": "css=.profile-icon",
+      "targets": [
+        ["css=.profile-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "65f0d141-5470-4a0a-82fb-b611bf604ad5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-out-button",
+      "targets": [
+        ["css=.sign-out-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a777b046-d5cd-42ee-b6a1-db2072fffa87",
+      "comment": "",
+      "command": "click",
+      "target": "css=#form_sign_out .confirm",
+      "targets": [
+        ["css=#form_sign_out .confirm", "css:finder"],
+        ["xpath=//input[@value='Sign out']", "xpath:attributes"],
+        ["xpath=//div[@id='add_moderator_buttons']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "726b03c2-2b4d-474b-b4bf-7466f3a5d529",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9f398c95-f9bf-41c2-8d7e-8ce06927533a",
+    "name": "SSU_21_2.2.1_DeleteTournament",
+    "commands": [{
+      "id": "5549c576-0bcf-4342-80e5-a7f4ac48b460",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "727a92fc-019d-43a4-8364-968adc745eaa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c105f025-180b-4cbd-b76c-551428decc71",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign_in_button",
+      "targets": [
+        ["id=sign_in_button", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#sign_in_button", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='sign_in_button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/sign-in')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aee62b85-dedf-431b-a37e-f067350d3a8a",
+      "comment": "",
+      "command": "click",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43eac711-44d1-4633-90c7-d6ccb719d6b2",
+      "comment": "",
+      "command": "type",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "viktor"
+    }, {
+      "id": "0c6424f1-7186-4b05-888a-379c0ea27964",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee8be8c3-71be-45f6-a88e-2162ad5b8495",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "morpheus"
+    }, {
+      "id": "9bca9c61-21ac-4f43-b7f6-d668ca1a6de3",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-button",
+      "targets": [
+        ["id=submit-button", "id"],
+        ["css=#submit-button", "css:finder"],
+        ["xpath=//input[@id='submit-button']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f7f8f52-d003-41ee-9aab-4dd1c42bad21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.div_za_svaki_forum:nth-child(5) img",
+      "targets": [
+        ["css=.div_za_svaki_forum:nth-child(5) img", "css:finder"],
+        ["xpath=//img[@alt='League of Legends']", "xpath:img"],
+        ["xpath=//div[5]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc08ecdc-0d81-4315-afef-d4b805441334",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tournaments",
+      "targets": [
+        ["linkText=Tournaments", "linkText"],
+        ["css=.forum-button:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Tournaments')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/forum/7/list-tournaments')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Tournaments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94313ef2-d262-4f3e-b7fa-c936d50a8219",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(3) tr:nth-child(2) > .tdPad:nth-child(2)",
+      "targets": [
+        ["css=a:nth-child(3) tr:nth-child(2) > .tdPad:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main']/a[3]/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//a[3]/div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'LOL Mini Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "88313e17-7e56-46d0-8590-c2f3304ce05d",
+      "comment": "",
+      "command": "click",
+      "target": "id=deleteTour",
+      "targets": [
+        ["id=deleteTour", "id"],
+        ["css=#deleteTour", "css:finder"],
+        ["xpath=//button[@id='deleteTour']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/form/div[2]/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14aa3fbe-6d1e-47ec-a985-393d56b3c5e6",
+      "comment": "",
+      "command": "click",
+      "target": "id=tour_event_submit_button",
+      "targets": [
+        ["id=tour_event_submit_button", "id"],
+        ["name=delete", "name"],
+        ["css=#tour_event_submit_button", "css:finder"],
+        ["xpath=//button[@id='tour_event_submit_button']", "xpath:attributes"],
+        ["xpath=//div[3]/div/form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd80f3dd-1e74-4032-8ae5-d738c02af971",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=a:nth-child(3) tr:nth-child(2) > .tdPad:nth-child(2)",
+      "targets": [
+        ["css=a:nth-child(3) tr:nth-child(2) > .tdPad:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main']/a[3]/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//a[3]/div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'LOL Mini Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "051dc911-090b-4d2a-b66e-6bd474357e2f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#SVGRepo_iconCarrier_profile > path:nth-child(1)",
+      "targets": [
+        ["css=#SVGRepo_iconCarrier_profile > path:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "747e24b4-21e1-465f-a40a-30ad61924506",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-out-button",
+      "targets": [
+        ["css=.sign-out-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7e5414f-d42d-4de7-83b3-59b6480398ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=#form_sign_out .confirm",
+      "targets": [
+        ["css=#form_sign_out .confirm", "css:finder"],
+        ["xpath=//input[@value='Sign out']", "xpath:attributes"],
+        ["xpath=//div[@id='add_moderator_buttons']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e75569b9-5992-4e11-b84a-189ecc9233a8",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "bc610d2c-cea1-4429-a900-0ad81fd0029d",
+    "name": "SSU_22_2.2.1_EnterTournament",
+    "commands": [{
+      "id": "53bba91c-4a51-4800-a21a-a46142df96d0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a70ad895-db9d-4242-ae89-0954379e0b8e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bfe375fc-1081-42b6-bdc5-7e9b531d5647",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign_in_button",
+      "targets": [
+        ["id=sign_in_button", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#sign_in_button", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='sign_in_button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/sign-in')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b455f142-1d7a-4cc5-b244-35cbd3b21927",
+      "comment": "",
+      "command": "click",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a562edcc-6119-48ee-a9eb-058f1a1d97c0",
+      "comment": "",
+      "command": "type",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "nemanja"
+    }, {
+      "id": "d0ad7343-3834-49f7-a70c-b02c7420f22e",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "956c2bd3-f36c-4601-a162-6aae7ca8a286",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "trinity"
+    }, {
+      "id": "9c4fe60d-9fe2-46a3-b447-c07a9b9cd5b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-button",
+      "targets": [
+        ["id=submit-button", "id"],
+        ["css=#submit-button", "css:finder"],
+        ["xpath=//input[@id='submit-button']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd9b6466-b54f-48d7-b9d8-b1ef6889f683",
+      "comment": "",
+      "command": "click",
+      "target": "css=.div_za_svaki_forum:nth-child(5) img",
+      "targets": [
+        ["css=.div_za_svaki_forum:nth-child(5) img", "css:finder"],
+        ["xpath=//img[@alt='League of Legends']", "xpath:img"],
+        ["xpath=//div[5]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87a30770-32e3-4de7-a793-66d453a1d53c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tournaments",
+      "targets": [
+        ["linkText=Tournaments", "linkText"],
+        ["css=.forum-button:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Tournaments')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/forum/7/list-tournaments')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Tournaments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02771b23-3b36-41f5-bc53-fb4f3b912681",
+      "comment": "",
+      "command": "click",
+      "target": "id=createButton",
+      "targets": [
+        ["id=createButton", "id"],
+        ["css=#createButton", "css:finder"],
+        ["xpath=//button[@id='createButton']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/div/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb7a1aad-0c33-47db-a7d7-adaf3a64022b",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_name",
+      "targets": [
+        ["name=tour_name", "name"],
+        ["css=tr:nth-child(1) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_name']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0eb3c685-d1a2-4d4e-ad43-6dc535a7b30d",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_name",
+      "targets": [
+        ["name=tour_name", "name"],
+        ["css=tr:nth-child(1) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_name']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Test LoL Tournament"
+    }, {
+      "id": "cb77b870-5f45-41c4-b289-45905b1ed92c",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_date",
+      "targets": [
+        ["name=tour_date", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_date']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9aabbdcf-fccb-4843-a9c8-01aff2a5a481",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_date",
+      "targets": [
+        ["name=tour_date", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_date']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": "2024-07-02"
+    }, {
+      "id": "3874091e-f72d-423a-b36c-14dfcfb9bd8f",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_time",
+      "targets": [
+        ["name=tour_time", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_time']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d716189-51d1-4695-b85c-df15fc0f1cf9",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_time",
+      "targets": [
+        ["name=tour_time", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_time']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "04:43"
+    }, {
+      "id": "df40153b-1c4a-4fde-8e06-ffee0ba2244a",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_players_per_team",
+      "targets": [
+        ["name=tour_players_per_team", "name"],
+        ["css=tr:nth-child(3) .tekstPolje", "css:finder"],
+        ["xpath=//select[@name='tour_players_per_team']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[3]/td[2]/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'5 players')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec5af50e-332e-45ae-8ea6-21786b0fd92f",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_num_of_places",
+      "targets": [
+        ["name=tour_num_of_places", "name"],
+        ["css=tr:nth-child(4) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_num_of_places']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[4]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82975b4f-951c-4f52-be93-4b80d84bf11e",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_num_of_places",
+      "targets": [
+        ["name=tour_num_of_places", "name"],
+        ["css=tr:nth-child(4) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_num_of_places']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[4]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": "32"
+    }, {
+      "id": "ab41b816-dc8f-47f4-8ff6-400ca34e53fa",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_format",
+      "targets": [
+        ["name=tour_format", "name"],
+        ["css=tr:nth-child(5) .tekstPolje", "css:finder"],
+        ["xpath=//select[@name='tour_format']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[5]/td[2]/div/select", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42961f11-1959-4430-a05c-f267d905a8bf",
+      "comment": "",
+      "command": "select",
+      "target": "name=tour_format",
+      "targets": [],
+      "value": "label=Best of 3"
+    }, {
+      "id": "6b80bf1f-9bd3-46fa-932f-4db47a31d0d8",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_value",
+      "targets": [
+        ["name=tour_value", "name"],
+        ["css=tr:nth-child(6) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_value']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f79cb52-d98b-404d-a9fc-45480d4f9480",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_value",
+      "targets": [
+        ["name=tour_value", "name"],
+        ["css=tr:nth-child(6) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_value']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "c4fd5fc1-3418-4952-8f56-f2e3c0c7f27d",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_currency",
+      "targets": [
+        ["name=tour_currency", "name"],
+        ["css=.mx-auto:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_currency']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0fc478e-daab-4118-bcff-4819548a0a04",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_currency",
+      "targets": [
+        ["name=tour_currency", "name"],
+        ["css=.mx-auto:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_currency']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": "$"
+    }, {
+      "id": "f20d81ae-b9be-4f33-8a76-8a410f2085dc",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_currency",
+      "targets": [
+        ["name=tour_currency", "name"],
+        ["css=.mx-auto:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_currency']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e146147e-f56f-4470-bbcf-3508fc9e66c2",
+      "comment": "",
+      "command": "click",
+      "target": "id=createButton",
+      "targets": [
+        ["id=createButton", "id"],
+        ["css=#createButton", "css:finder"],
+        ["xpath=//button[@id='createButton']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0c7fe40-e1be-439c-a731-23598e2b261b",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4) tr:nth-child(2) > .tdPad:nth-child(2)",
+      "targets": [
+        ["css=a:nth-child(4) tr:nth-child(2) > .tdPad:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main']/a[4]/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//a[4]/div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Test LoL Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "05c59b86-2800-4cdd-8961-bef58a17a265",
+      "comment": "",
+      "command": "click",
+      "target": "id=joinTour",
+      "targets": [
+        ["id=joinTour", "id"],
+        ["name=join", "name"],
+        ["css=#joinTour", "css:finder"],
+        ["xpath=//button[@id='joinTour']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Join Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b4a9c66-0ddf-4288-83ee-d16ef35398b9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=form > p:nth-child(7)",
+      "targets": [
+        ["css=form > p:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='levaStrana']/form/p[4]", "xpath:idRelative"],
+        ["xpath=//form/p[4]", "xpath:position"],
+        ["xpath=//p[contains(.,' Matrix')]", "xpath:innerText"]
+      ],
+      "value": "Matrix"
+    }, {
+      "id": "8d9fb9fa-1e12-4e9e-b08b-2217e487077f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.profile-icon",
+      "targets": [
+        ["css=.profile-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "c90c998d-1497-442e-a7cd-30bd339d3d47",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-out-button",
+      "targets": [
+        ["css=.sign-out-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ac393d0-437e-4652-9b7b-582002bd3aaf",
+      "comment": "",
+      "command": "click",
+      "target": "css=#form_sign_out .confirm",
+      "targets": [
+        ["css=#form_sign_out .confirm", "css:finder"],
+        ["xpath=//input[@value='Sign out']", "xpath:attributes"],
+        ["xpath=//div[@id='add_moderator_buttons']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "924bb135-be27-4090-8138-77fd5fcc3df1",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "bdc0fe0f-cc2e-4e94-ae73-9dea46076b9a",
+    "name": "SSU_23_2.2.1_LeaveTournament",
+    "commands": [{
+      "id": "c70c8e92-d5cd-4466-ac1d-124a0b863f1f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c9df132-d2b9-4246-9cbb-c73a30866998",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d7a9029-d43e-4b55-b680-8214e2983338",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign_in_button",
+      "targets": [
+        ["id=sign_in_button", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#sign_in_button", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='sign_in_button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/sign-in')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2da93c19-c14f-488e-b94c-1359ce9556f1",
+      "comment": "",
+      "command": "click",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dcdb00b8-c1e5-49d4-ab23-e03903f55eab",
+      "comment": "",
+      "command": "type",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "nemanja"
+    }, {
+      "id": "a1653517-4e2b-47f2-8f88-228b0ab0ad52",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf374992-a4d0-48e2-89c2-0704b9993f49",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "trinity"
+    }, {
+      "id": "e6cabbef-06ab-4c11-8826-195b04333817",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-button",
+      "targets": [
+        ["id=submit-button", "id"],
+        ["css=#submit-button", "css:finder"],
+        ["xpath=//input[@id='submit-button']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20b341ac-92e5-46a3-b53b-dca88195bbea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.div_za_svaki_forum:nth-child(5) img",
+      "targets": [
+        ["css=.div_za_svaki_forum:nth-child(5) img", "css:finder"],
+        ["xpath=//img[@alt='League of Legends']", "xpath:img"],
+        ["xpath=//div[5]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abef12cf-b4d8-43ea-a605-10c2d95033ab",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tournaments",
+      "targets": [
+        ["linkText=Tournaments", "linkText"],
+        ["css=.forum-button:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Tournaments')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/forum/7/list-tournaments')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Tournaments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2101da1-59fe-43e4-8c3b-0476695bc892",
+      "comment": "",
+      "command": "click",
+      "target": "id=createButton",
+      "targets": [
+        ["id=createButton", "id"],
+        ["css=#createButton", "css:finder"],
+        ["xpath=//button[@id='createButton']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/div/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fbaea49-249f-4eb8-a9c7-ebb0a06ffa53",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_name",
+      "targets": [
+        ["name=tour_name", "name"],
+        ["css=tr:nth-child(1) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_name']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77c83ad6-63f7-4f27-ba98-ddad8f2fa766",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_name",
+      "targets": [
+        ["name=tour_name", "name"],
+        ["css=tr:nth-child(1) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_name']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "LoL Test Tournament Leave"
+    }, {
+      "id": "0a2674c7-9c70-4fc2-9b6f-6de64d7ad34f",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_date",
+      "targets": [
+        ["name=tour_date", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_date']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7641817a-9dd5-4222-8f26-ab3aa463decd",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_date",
+      "targets": [
+        ["name=tour_date", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_date']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": "2024-09-22"
+    }, {
+      "id": "ae27c240-65b6-4fc2-bfe6-d1ddd5122f6d",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_time",
+      "targets": [
+        ["name=tour_time", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_time']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "046d6c91-2334-479d-99fc-a1faf11ffcfc",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_time",
+      "targets": [
+        ["name=tour_time", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_time']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "05:02"
+    }, {
+      "id": "a280e697-23cc-4334-a089-d3384e63f3c7",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_num_of_places",
+      "targets": [
+        ["name=tour_num_of_places", "name"],
+        ["css=tr:nth-child(4) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_num_of_places']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[4]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05f0b444-f67c-42e5-99e4-d3db87e02d1c",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_num_of_places",
+      "targets": [
+        ["name=tour_num_of_places", "name"],
+        ["css=tr:nth-child(4) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_num_of_places']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[4]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": "16"
+    }, {
+      "id": "c247f326-fe92-4d02-bc50-13aafd016864",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_format",
+      "targets": [
+        ["name=tour_format", "name"],
+        ["css=tr:nth-child(5) .tekstPolje", "css:finder"],
+        ["xpath=//select[@name='tour_format']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[5]/td[2]/div/select", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4eb84b4-b372-43f6-9ff6-f31e617e89e1",
+      "comment": "",
+      "command": "select",
+      "target": "name=tour_format",
+      "targets": [],
+      "value": "label=Best of 5"
+    }, {
+      "id": "60a2b950-7065-43b9-b337-88b4decea10d",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_value",
+      "targets": [
+        ["name=tour_value", "name"],
+        ["css=tr:nth-child(6) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_value']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94b696ff-baeb-4bda-bfcd-b8f2f0fba1bf",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_value",
+      "targets": [
+        ["name=tour_value", "name"],
+        ["css=tr:nth-child(6) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_value']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "ef87b61e-d363-47fe-936a-b20a04dac1a0",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_currency",
+      "targets": [
+        ["name=tour_currency", "name"],
+        ["css=.mx-auto:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_currency']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48e2c8a5-b523-4544-9b23-b0516a1b2bf0",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_currency",
+      "targets": [
+        ["name=tour_currency", "name"],
+        ["css=.mx-auto:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_currency']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": "$"
+    }, {
+      "id": "c8ccf94a-4158-4729-ade4-f55693d2db7b",
+      "comment": "",
+      "command": "click",
+      "target": "id=createButton",
+      "targets": [
+        ["id=createButton", "id"],
+        ["css=#createButton", "css:finder"],
+        ["xpath=//button[@id='createButton']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2dd0f46b-cd00-4d55-8b31-d8cc5c9674cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4) tr:nth-child(2) > .tdPad:nth-child(2)",
+      "targets": [
+        ["css=a:nth-child(4) tr:nth-child(2) > .tdPad:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main']/a[4]/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//a[4]/div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'LoL Test Tournament Leave')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbd142b3-44f1-4acb-ba05-d1992f8a29c9",
+      "comment": "",
+      "command": "click",
+      "target": "id=joinTour",
+      "targets": [
+        ["id=joinTour", "id"],
+        ["name=join", "name"],
+        ["css=#joinTour", "css:finder"],
+        ["xpath=//button[@id='joinTour']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Join Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "437c08e7-2be0-4db4-911d-de5bd2ff26e7",
+      "comment": "",
+      "command": "click",
+      "target": "id=leaveTour",
+      "targets": [
+        ["id=leaveTour", "id"],
+        ["css=#leaveTour", "css:finder"],
+        ["xpath=//button[@id='leaveTour']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/form/div/button[2]", "xpath:idRelative"],
+        ["xpath=//form/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Leave Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c92668fc-ac61-448f-9aff-5b0cb2396431",
+      "comment": "",
+      "command": "click",
+      "target": "id=tour_event_submit_button",
+      "targets": [
+        ["id=tour_event_submit_button", "id"],
+        ["name=leave", "name"],
+        ["css=#tour_event_submit_button", "css:finder"],
+        ["xpath=//button[@id='tour_event_submit_button']", "xpath:attributes"],
+        ["xpath=//div[3]/div/form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e286e729-4fbd-4548-bdc5-ef0123f75307",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=form > p:nth-child(7)",
+      "targets": [
+        ["css=form > p:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='levaStrana']/form/p[4]", "xpath:idRelative"],
+        ["xpath=//form/p[4]", "xpath:position"],
+        ["xpath=//p[contains(.,' Matrix')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59159fb4-29ea-4c6c-bc29-e81cef6bee67",
+      "comment": "",
+      "command": "click",
+      "target": "css=#SVGRepo_iconCarrier_profile > path:nth-child(2)",
+      "targets": [
+        ["css=#SVGRepo_iconCarrier_profile > path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe7f2bac-1112-4ad8-9964-8e26e987dc1b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-out-button",
+      "targets": [
+        ["css=.sign-out-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "902db470-fe2a-4d59-a757-cbf62cdb7f51",
+      "comment": "",
+      "command": "click",
+      "target": "css=#form_sign_out .confirm",
+      "targets": [
+        ["css=#form_sign_out .confirm", "css:finder"],
+        ["xpath=//input[@value='Sign out']", "xpath:attributes"],
+        ["xpath=//div[@id='add_moderator_buttons']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd813392-c92a-4698-8076-cbc1819dbc8d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d2555858-52b4-424c-aebd-377347de8e54",
+    "name": "SSU_24_2.2.1_KickTeamFromTournament",
+    "commands": [{
+      "id": "8c1c4650-803e-461b-b41b-279ea1ececa4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bbb6f8b0-b170-4758-a7c8-7e1c3aa798d0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b8ef279-9a21-4c18-84b1-bbd70d0ee9e7",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign_in_button",
+      "targets": [
+        ["id=sign_in_button", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#sign_in_button", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='sign_in_button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/sign-in')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4099993f-2b56-40eb-8a75-d418b3061681",
+      "comment": "",
+      "command": "click",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d33dac5-ede6-43de-bd22-ce84dbbbeab3",
+      "comment": "",
+      "command": "type",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "nemanja"
+    }, {
+      "id": "0c4584b4-d813-4487-a583-b17d44468dc2",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab14e938-5560-4a1a-8236-74b4cf90812d",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "trinity"
+    }, {
+      "id": "0bb7288e-dc65-4a77-9117-a37a6f2be9d3",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-button",
+      "targets": [
+        ["id=submit-button", "id"],
+        ["css=#submit-button", "css:finder"],
+        ["xpath=//input[@id='submit-button']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "caca09be-e421-49b3-8526-452a36ee619e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.div_za_svaki_forum:nth-child(5) img",
+      "targets": [
+        ["css=.div_za_svaki_forum:nth-child(5) img", "css:finder"],
+        ["xpath=//img[@alt='League of Legends']", "xpath:img"],
+        ["xpath=//div[5]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87d010ae-6513-4fd3-8963-0e3988dff18f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tournaments",
+      "targets": [
+        ["linkText=Tournaments", "linkText"],
+        ["css=.forum-button:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Tournaments')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/forum/7/list-tournaments')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Tournaments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d7560e3-a33a-4416-b643-6b316ffa5dc9",
+      "comment": "",
+      "command": "click",
+      "target": "id=createButton",
+      "targets": [
+        ["id=createButton", "id"],
+        ["css=#createButton", "css:finder"],
+        ["xpath=//button[@id='createButton']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/div/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69279f69-d753-4220-a285-3151011ebc98",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_name",
+      "targets": [
+        ["name=tour_name", "name"],
+        ["css=tr:nth-child(1) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_name']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c960401a-4cef-4391-b6d6-a4f0b54911f8",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_name",
+      "targets": [
+        ["name=tour_name", "name"],
+        ["css=tr:nth-child(1) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_name']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "LoL Test Tournament Kick"
+    }, {
+      "id": "b869eea6-4db3-41d7-8715-eefdbd511310",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_date",
+      "targets": [
+        ["name=tour_date", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_date']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3fd4094-a238-4364-9252-5dca95ef9b72",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_date",
+      "targets": [
+        ["name=tour_date", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_date']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5be77234-d704-4db6-b1fe-04a9699c3264",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_date",
+      "targets": [
+        ["name=tour_date", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_date']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": "2024-08-31"
+    }, {
+      "id": "0f32aec0-0af5-4d51-b0e9-74214c8b5e0d",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_time",
+      "targets": [
+        ["name=tour_time", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_time']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ae9b439-8622-4145-8a37-da1af43caef3",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_time",
+      "targets": [
+        ["name=tour_time", "name"],
+        ["css=tr:nth-child(2) .tekstPolje:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_time']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[2]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "12:30"
+    }, {
+      "id": "9d7d1232-d9bf-4ff7-8bf3-00e67820872f",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_players_per_team",
+      "targets": [
+        ["name=tour_players_per_team", "name"],
+        ["css=tr:nth-child(3) .tekstPolje", "css:finder"],
+        ["xpath=//select[@name='tour_players_per_team']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[3]/td[2]/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'5 players')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "11c766bf-18d9-4a64-a784-ef019a572071",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_players_per_team",
+      "targets": [
+        ["name=tour_players_per_team", "name"],
+        ["css=tr:nth-child(3) .tekstPolje", "css:finder"],
+        ["xpath=//select[@name='tour_players_per_team']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[3]/td[2]/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'5 players')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fb53893-fad0-4eca-b2d3-e083e112357e",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_num_of_places",
+      "targets": [
+        ["name=tour_num_of_places", "name"],
+        ["css=tr:nth-child(4) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_num_of_places']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[4]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6b43566-7185-4973-b0bc-9ba672fa9195",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_num_of_places",
+      "targets": [
+        ["name=tour_num_of_places", "name"],
+        ["css=tr:nth-child(4) .tekstPolje", "css:finder"],
+        ["xpath=//input[@name='tour_num_of_places']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[4]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": "16"
+    }, {
+      "id": "c470b35f-c710-40a3-8b34-d14310433508",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_format",
+      "targets": [
+        ["name=tour_format", "name"],
+        ["css=tr:nth-child(5) .tekstPolje", "css:finder"],
+        ["xpath=//select[@name='tour_format']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[5]/td[2]/div/select", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cea0c602-b81f-4b85-9462-dbea0ad63b14",
+      "comment": "",
+      "command": "select",
+      "target": "name=tour_format",
+      "targets": [],
+      "value": "label=Best of 3"
+    }, {
+      "id": "87623645-8b91-45f5-88b7-581b54b9703d",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_value",
+      "targets": [
+        ["name=tour_value", "name"],
+        ["css=tr:nth-child(6) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_value']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f69ca20-0609-493e-8a87-1731cc744952",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_value",
+      "targets": [
+        ["name=tour_value", "name"],
+        ["css=tr:nth-child(6) .tekstPolje:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='tour_value']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "70e91f56-29bd-478f-b816-3252be3504ed",
+      "comment": "",
+      "command": "click",
+      "target": "name=tour_currency",
+      "targets": [
+        ["name=tour_currency", "name"],
+        ["css=.mx-auto:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_currency']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a55f2297-16b6-4bc7-bd34-265eae5ac4e1",
+      "comment": "",
+      "command": "type",
+      "target": "name=tour_currency",
+      "targets": [
+        ["name=tour_currency", "name"],
+        ["css=.mx-auto:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='tour_currency']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/table/tbody/tr[6]/td[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": "$"
+    }, {
+      "id": "b0fc4cbc-f7af-4231-9988-77e994accf91",
+      "comment": "",
+      "command": "click",
+      "target": "id=createButton",
+      "targets": [
+        ["id=createButton", "id"],
+        ["css=#createButton", "css:finder"],
+        ["xpath=//button[@id='createButton']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b09a0010-454b-406a-80ed-7aeec820cf5d",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4) tr:nth-child(2) > .tdPad:nth-child(2)",
+      "targets": [
+        ["css=a:nth-child(4) tr:nth-child(2) > .tdPad:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main']/a[4]/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//a[4]/div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'LoL Test Tournament Kick')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dadd820-f0e8-4aee-808d-e24b91add0ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=joinTour",
+      "targets": [
+        ["id=joinTour", "id"],
+        ["name=join", "name"],
+        ["css=#joinTour", "css:finder"],
+        ["xpath=//button[@id='joinTour']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Join Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cac360f1-1e36-46ad-84ae-ca1b404fc68f",
+      "comment": "",
+      "command": "click",
+      "target": "id=1",
+      "targets": [
+        ["id=1", "id"],
+        ["css=#\\31", "css:finder"],
+        ["xpath=//button[@id='1']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/form/p[4]/button", "xpath:idRelative"],
+        ["xpath=//p[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "357cf2a9-b912-4821-9922-f1dd4fa3c204",
+      "comment": "",
+      "command": "click",
+      "target": "id=tour_event_submit_button",
+      "targets": [
+        ["id=tour_event_submit_button", "id"],
+        ["name=kick_1", "name"],
+        ["css=#tour_event_submit_button", "css:finder"],
+        ["xpath=//button[@id='tour_event_submit_button']", "xpath:attributes"],
+        ["xpath=//div[3]/div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Kick')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da3228dc-7768-4c8f-ad97-870c4c610120",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=form > p:nth-child(7)",
+      "targets": [
+        ["css=form > p:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='levaStrana']/form/p[4]", "xpath:idRelative"],
+        ["xpath=//form/p[4]", "xpath:position"],
+        ["xpath=//p[contains(.,' Matrix')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f3d9bcc-0e70-4b0c-b7d6-c098ab9b1580",
+      "comment": "",
+      "command": "click",
+      "target": "css=.profile-icon",
+      "targets": [
+        ["css=.profile-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2ca6cca-477a-4820-8eb9-ae8035d65e2f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-out-button",
+      "targets": [
+        ["css=.sign-out-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "89803fa2-70f5-4b9d-8ff4-666f37291a68",
+      "comment": "",
+      "command": "click",
+      "target": "css=#form_sign_out .confirm",
+      "targets": [
+        ["css=#form_sign_out .confirm", "css:finder"],
+        ["xpath=//input[@value='Sign out']", "xpath:attributes"],
+        ["xpath=//div[@id='add_moderator_buttons']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3455fa29-4eae-4592-a933-b8b39f7e3428",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6a2d3729-164c-4a7e-9b20-f5bd1003cf9a",
+    "name": "SSU_25_2.2.1_StartTournament",
+    "commands": [{
+      "id": "bd99433d-82d7-4f81-b201-307048bb2ff2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd80aeeb-c8a2-4f85-910b-3921c29824a2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87c896aa-1442-4cde-aeba-6a8ab71d3646",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign_in_button",
+      "targets": [
+        ["id=sign_in_button", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#sign_in_button", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='sign_in_button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/sign-in')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5420f070-13bc-4f80-8ccf-3ae85f9585f6",
+      "comment": "",
+      "command": "click",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b7e0db2-d9b9-4e80-a523-b304958271d8",
+      "comment": "",
+      "command": "type",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "nemanja"
+    }, {
+      "id": "d92cf7b2-00fc-42d1-b988-31d7f56061bd",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c632fee3-8da2-4646-9679-ed7368cb18bb",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "trinity"
+    }, {
+      "id": "2373d42b-1a55-43a2-92f5-72586048b52d",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-button",
+      "targets": [
+        ["id=submit-button", "id"],
+        ["css=#submit-button", "css:finder"],
+        ["xpath=//input[@id='submit-button']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c71846a9-b3a3-4061-960c-a33529dd9247",
+      "comment": "",
+      "command": "click",
+      "target": "css=.div_za_svaki_forum:nth-child(5) img",
+      "targets": [
+        ["css=.div_za_svaki_forum:nth-child(5) img", "css:finder"],
+        ["xpath=//img[@alt='League of Legends']", "xpath:img"],
+        ["xpath=//div[5]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89a7901c-e85b-48c0-bb23-f1d326e31944",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tournaments",
+      "targets": [
+        ["linkText=Tournaments", "linkText"],
+        ["css=.forum-button:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Tournaments')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/forum/7/list-tournaments')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Tournaments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2cf435c-fd99-4ba4-938f-0dcfccc7f318",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(2) tr:nth-child(2) > .tdPad:nth-child(2)",
+      "targets": [
+        ["css=a:nth-child(2) tr:nth-child(2) > .tdPad:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main']/a[2]/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//a[2]/div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'LOL Pros Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "74e862ec-6ff7-4142-b055-86c315615a59",
+      "comment": "",
+      "command": "click",
+      "target": "id=startTour",
+      "targets": [
+        ["id=startTour", "id"],
+        ["css=#startTour", "css:finder"],
+        ["xpath=//button[@id='startTour']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/form/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Start Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f994a40a-0cac-4c32-b7a4-737eccb4a269",
+      "comment": "",
+      "command": "click",
+      "target": "id=tour_event_submit_button",
+      "targets": [
+        ["id=tour_event_submit_button", "id"],
+        ["name=start", "name"],
+        ["css=#tour_event_submit_button", "css:finder"],
+        ["xpath=//button[@id='tour_event_submit_button']", "xpath:attributes"],
+        ["xpath=//div[3]/div/form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef25d4e2-027a-4a2d-a631-76010e8ddd5f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.vrednostiDesnaStrana > span",
+      "targets": [
+        ["css=.vrednostiDesnaStrana > span", "css:finder"],
+        ["xpath=//div[@id='levaStrana']/p[2]/span", "xpath:idRelative"],
+        ["xpath=//p[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'IN PROGRESS')]", "xpath:innerText"]
+      ],
+      "value": "IN PROGRESS"
+    }, {
+      "id": "d0f55aa5-432f-4472-9f91-744997bacf53",
+      "comment": "",
+      "command": "click",
+      "target": "css=#SVGRepo_iconCarrier_profile > path:nth-child(3)",
+      "targets": [
+        ["css=#SVGRepo_iconCarrier_profile > path:nth-child(3)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "c46a129e-d2bf-4360-b1ba-ebcec5e8c453",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-out-button",
+      "targets": [
+        ["css=.sign-out-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1374e1f-fb13-412e-80b7-31ed84811cd4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#form_sign_out .confirm",
+      "targets": [
+        ["css=#form_sign_out .confirm", "css:finder"],
+        ["xpath=//input[@value='Sign out']", "xpath:attributes"],
+        ["xpath=//div[@id='add_moderator_buttons']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7495da25-a063-4634-8565-c8a63fd4e1bc",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9403b743-cab5-46be-9159-2f2ba0f61067",
+    "name": "SSU_25_2.2.5_EndTournament",
+    "commands": [{
+      "id": "9535fb1c-ab2c-46af-9844-040003b7ef6d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30318cf2-cb94-490a-8e0a-29ba4fe87892",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f8a37da-3552-4191-9b32-fdc8d76c7b05",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign_in_button",
+      "targets": [
+        ["id=sign_in_button", "id"],
+        ["linkText=Sign In", "linkText"],
+        ["css=#sign_in_button", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//a[@id='sign_in_button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/sign-in')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "41417395-f127-4a82-bef6-b898f88941c8",
+      "comment": "",
+      "command": "click",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "793b9a91-d756-46a8-b299-c0a48443b19c",
+      "comment": "",
+      "command": "type",
+      "target": "id=username-field",
+      "targets": [
+        ["id=username-field", "id"],
+        ["name=username-field", "name"],
+        ["css=#username-field", "css:finder"],
+        ["xpath=//input[@id='username-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "viktor"
+    }, {
+      "id": "d864b0ac-c313-4036-90f7-1131ff4c6549",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75deb190-62db-4fad-a1fe-d08615dbf562",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-field",
+      "targets": [
+        ["id=password-field", "id"],
+        ["name=password-field", "name"],
+        ["css=#password-field", "css:finder"],
+        ["xpath=//input[@id='password-field']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "morpheus"
+    }, {
+      "id": "8217e433-db91-4262-b64f-3dfc81bdfeed",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-button",
+      "targets": [
+        ["id=submit-button", "id"],
+        ["css=#submit-button", "css:finder"],
+        ["xpath=//input[@id='submit-button']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-div']/form/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7c7b644-e19d-4fe4-83bd-01da65b30296",
+      "comment": "",
+      "command": "click",
+      "target": "css=.div_za_svaki_forum:nth-child(2) img",
+      "targets": [
+        ["css=.div_za_svaki_forum:nth-child(2) img", "css:finder"],
+        ["xpath=//img[@alt='Counter-Strike 2']", "xpath:img"],
+        ["xpath=//div[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99f2dcdf-f1c1-48da-ae9e-c015e46223f1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tournaments",
+      "targets": [
+        ["linkText=Tournaments", "linkText"],
+        ["css=.forum-button:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Tournaments')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/forum/5/list-tournaments')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Tournaments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7dc7f9e6-2803-4aa2-90a9-5b72f2bc28a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4) tr:nth-child(2) > .tdPad:nth-child(2)",
+      "targets": [
+        ["css=a:nth-child(4) tr:nth-child(2) > .tdPad:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main']/a[4]/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//a[4]/div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Too much for zblock')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9935ba71-cf79-4343-8195-9b4f1d4bcdc8",
+      "comment": "",
+      "command": "click",
+      "target": "id=finishTour",
+      "targets": [
+        ["id=finishTour", "id"],
+        ["css=#finishTour", "css:finder"],
+        ["xpath=//button[@id='finishTour']", "xpath:attributes"],
+        ["xpath=//div[@id='levaStrana']/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Finish Tournament')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "62e545b8-bfb0-463f-b926-3a3a6b46c604",
+      "comment": "",
+      "command": "click",
+      "target": "id=tour_event_submit_button",
+      "targets": [
+        ["id=tour_event_submit_button", "id"],
+        ["name=finish", "name"],
+        ["css=#tour_event_submit_button", "css:finder"],
+        ["xpath=//button[@id='tour_event_submit_button']", "xpath:attributes"],
+        ["xpath=//div[3]/div/form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "073abd4c-6b52-4743-be58-617888d05a93",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=a:nth-child(4) tr:nth-child(2) > .tdPad:nth-child(2)",
+      "targets": [
+        ["css=a:nth-child(4) tr:nth-child(2) > .tdPad:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main']/a[4]/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//a[4]/div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Too much for zblock')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "108f59fd-93cd-48d9-9b20-8d43b02abe22",
+      "comment": "",
+      "command": "click",
+      "target": "css=#SVGRepo_iconCarrier_profile > path:nth-child(2)",
+      "targets": [
+        ["css=#SVGRepo_iconCarrier_profile > path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd4a073a-4e93-4e21-81df-47ea007eba05",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-out-button",
+      "targets": [
+        ["css=.sign-out-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf78a8ff-a79f-4188-8e5d-68f6cae62878",
+      "comment": "",
+      "command": "click",
+      "target": "css=#form_sign_out .confirm",
+      "targets": [
+        ["css=#form_sign_out .confirm", "css:finder"],
+        ["xpath=//input[@value='Sign out']", "xpath:attributes"],
+        ["xpath=//div[@id='add_moderator_buttons']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb673b88-c4a0-4f0c-a3ab-044902270f53",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "379eefb5-7094-48dd-b88a-ecf59d616412",
+    "name": "Run Tournament Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e74e3d94-ad09-471c-989b-92bfde25d70d", "52f7a47a-38a5-4e47-8754-8a2742ad2e92", "6a2d3729-164c-4a7e-9b20-f5bd1003cf9a", "9403b743-cab5-46be-9159-2f2ba0f61067"]
+  }, {
+    "id": "5eeb47d2-a323-4a57-a739-42d33b6b1ef4",
+    "name": "Create Tournament Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1f14742a-66f8-469e-aa2b-6451d8bf2a21"]
+  }, {
+    "id": "94cf884e-a10d-4735-aec4-59cfacdfb464",
+    "name": "Leave Team Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0924ae4e-8eb2-40f9-8b90-04df782d4b0d"]
+  }, {
+    "id": "e6d358cc-03d6-41a8-94c0-4fb93e2dc078",
+    "name": "Delete Tournament Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9f398c95-f9bf-41c2-8d7e-8ce06927533a"]
+  }, {
+    "id": "d71e4ffd-9af6-4297-86ba-370e6b7e7e2e",
+    "name": "Enter Tournament Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bc610d2c-cea1-4429-a900-0ad81fd0029d"]
+  }, {
+    "id": "b78bae79-2c43-4c3d-919c-b8353023fed4",
+    "name": "Leave Tournament Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bdc0fe0f-cc2e-4e94-ae73-9dea46076b9a"]
+  }, {
+    "id": "bee8c21f-b500-439d-a5a7-e3d0696d586e",
+    "name": "Kick Team From Tournament Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d2555858-52b4-424c-aebd-377347de8e54"]
+  }],
+  "urls": ["http://localhost:8000/"],
+  "plugins": []
+}

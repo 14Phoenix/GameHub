@@ -1,0 +1,297 @@
+/* Author: Viktor Mitrovic 0296/2021 */
+
+:root {
+    /* Background colors */
+    --bg-color: #1a1a1b;
+
+    /* Log In button colors */
+    --logo-red: #a2170f;
+    --logo-red-button-hover: #73100b;
+    --logo-letter: white;
+
+    /* GameHub header colors */
+    --gamehub-header-letter: white;
+
+    /* Banner colors */
+    --banner-letter: white;
+
+    /* Post area colors */
+    --post-area-border-color: white;
+
+    /* Create post colors */
+    --create-post-letter: white;
+
+    /* Single post colors */
+    --post-bg-color: #1e2123;
+    --post-border-color: #292c30;
+    --post-hover-bg-color: var(--post-border-color);
+
+    --post-body-letter: #878787;
+    --post-title-letter: white;
+    --post-username-letter: white;
+    --post-like-button-letter: white;
+
+    /* Button area colors */
+
+    --follow-button-hover-bg: #dfdfdf;
+
+
+    /* Single forum button colors */
+
+    --forum-button-bg-color: var(--post-bg-color);
+    --forum-button-border-color: var(--post-border-color);
+    --forum-button-hover-bg-color: var(--post-hover-bg-color);
+    
+
+    --forum-button-letter: white;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.banner {
+    height: 400px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+.forum-name {
+    color: white;
+    font-size: xxx-large;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.post-area {
+    /* background-color: violet; */
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.post-area-button-area {
+    padding: 0px;
+}
+
+.create-post-button {
+    border: 1px solid;
+    border-color: var(--logo-red);
+    border-radius: 20px;
+
+    color: var(--post-like-button-letter);
+    background-color: var(--logo-red);
+
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+
+    user-select: none;
+}
+
+.create-post-button:hover {
+    background-color: var(--logo-red-button-hover);
+}
+
+.follow-forum-button {
+    border: 1px solid;
+    border-color: white;
+    border-radius: 20px;
+
+    color: var(--logo-red);
+    background-color: white;
+
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+
+    user-select: none;
+}
+
+.follow-forum-button:hover {
+    background-color: var(--follow-button-hover-bg);
+}
+
+.unfollow-forum-button {
+    border: 1px solid white;
+    border-radius: 20px;
+
+    color: white;
+    background-color: var(--post-bg-color);
+
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    margin: 0px;
+
+    user-select: none;
+}
+
+.unfollow-forum-button:hover {
+    background-color: var(--post-hover-bg-color);
+}
+
+.admin-forum-buttons {
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+    float: right;
+}
+
+.add-remove-mod-button {
+    border: 1px solid white;
+    border-radius: 20px;
+
+    color: white;
+    background-color: var(--post-bg-color);
+
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    margin: 0px;
+
+    user-select: none;
+}
+
+.add-remove-mod-button:hover {
+    background-color: var(--post-hover-bg-color);
+}
+
+.post {
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: var(--post-border-color);
+    
+    background-color: var(--post-bg-color);
+    
+    padding-right: 10px;
+    padding-left: 10px;
+
+    margin-bottom: 5px;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.post:hover {
+    background-color: var(--post-hover-bg-color)
+}
+
+.post-username {
+    color: var(--post-username-letter);
+    font-size: 15px;
+    text-decoration: none;
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
+.post-username:hover {
+    text-decoration: underline;
+}
+
+.post-title {
+    color: var(--post-title-letter);
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.post-body {
+    color: var(--post-body-letter);
+    margin-top: 0px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
+
+.post-like-button {
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+
+}
+
+.post-like-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.like-icon {
+    fill: none;
+    stroke: white;
+    display: block;
+}
+
+.liked-icon {
+    fill: white;
+    stroke: black;
+    display: block;
+}
+
+.post-delete-button {
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+
+    float: right;
+}
+
+.post-delete-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.delete-icon {
+    fill: none;
+    stroke: white;
+    display: block;
+}
+
+.forum-button-area {
+    /* background-color: lime; */
+
+    top: 5px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+    
+    user-select: none;
+
+}
+
+.forum-button {
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: var(--forum-button-border-color);
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    margin-bottom: 2px;
+    
+    font-size: x-large;
+    font-weight: bold;
+    text-align: start;
+    text-decoration: none;
+
+    color: var(--forum-button-letter);
+    background-color: var(--forum-button-bg-color);
+}
+
+.forum-button:hover {
+    background-color: var(--forum-button-hover-bg-color);
+}

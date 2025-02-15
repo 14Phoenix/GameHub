@@ -1,0 +1,278 @@
+<!-- Author: Viktor Mitrovic 0296/2021 -->
+
+{% extends 'GameHubApp/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{ forum.name }}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/style_forum.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_header.css' %}" type="text/css">
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'JS/popup.js' %}"></script>
+    <script src="{% static 'JS/forum.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    
+    {% if is_admin %}
+        {# Add moderator popup #}
+        <div class="popup" data-gamehub-popup="add_moderator">
+            <div class="popup-body">
+                <div class="popup-header">
+                    <div class="popup-title">Add a moderator</div>
+    
+                    <div>
+                        <button id="close_x_add_moderator_button" class="popup-close" data-gamehub-popup-close="add_moderator">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <form id="form_add_moderator" class="popup-content" method="post" action="{% url 'promote_moderator' forum.idforum %}">
+                    {% csrf_token %}
+                    <input id="add_moderator_username_input" type="text" placeholder="Username" name="name_of_user" pattern=".{1,}">
+    
+                    
+                    <div id="add_moderator_buttons" class="popup-form-buttons">
+                        <button id="close_cancel_add_moderator_button" type="button" class="popup-form-button cancel" data-gamehub-popup-close="add_moderator">Cancel</button>
+                        <button class="popup-form-button confirm">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        {# Remove a moderator popup #}
+        <div class="popup" data-gamehub-popup="remove_moderator">
+            <div class="popup-body">
+                <div class="popup-header">
+                    <div class="popup-title">Remove a moderator</div>
+    
+                    <div>
+                        <button id="close_x_remove_moderator_button" class="popup-close" data-gamehub-popup-close="remove_moderator">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <form id="form_remove_moderator" class="popup-content" method="post" action="{% url 'demote_moderator' forum.idforum %}">
+                    {% csrf_token %}
+                    <input id="remove_moderator_username_input" type="text" placeholder="Username" name="name_of_user" pattern=".{1,}">
+    
+                    <div id="remove_moderator_buttons" class="popup-form-buttons">
+                        <button id="close_cancel_remove_moderator_button" type="button" class="popup-form-button cancel" data-gamehub-popup-close="remove_moderator">Cancel</button>
+                        <button class="popup-form-button confirm">Remove</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        {# Delete forum popup #}
+        <div class="popup" data-gamehub-popup="delete_forum">
+            <div class="popup-body">
+                <div class="popup-header">
+                    <div class="popup-title">Delete this forum</div>
+    
+                    <div>
+                        <button class="popup-close" data-gamehub-popup-close="delete_forum">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <form class="popup-content" method="post" action="{% url 'delete_forum' forum.idforum %}">
+                    {% csrf_token %}
+    
+                    <div class="popup-form-buttons">
+                        <button type="button" class="popup-form-button cancel" data-gamehub-popup-close="delete_forum">Cancel</button>
+                        <button class="popup-form-button confirm">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    {% endif %}
+    
+    {% if user.is_authenticated and team_member %}
+        
+        <div class="popup" data-gamehub-popup="leave_team">
+            <div class="popup-body">
+                <div class="popup-header">
+                    <div class="popup-title">
+                        Leave a team
+                    </div>
+                    <div>
+                        <button class="popup-close" data-gamehub-popup-close="leave_team">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <form id="form_leave_team" class="popup-content" method="post" action="{% url 'leave_a_team' forum.idforum %}">
+                    {% csrf_token %}
+                    <div class="popup-form-buttons">
+                        <button type="button" class="popup-form-button cancel" data-gamehub-popup-close="leave_team">Cancel</button>
+                        <button class="popup-form-button confirm" data-gamehub-popup-close="leave_team">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    {% endif %}
+
+    <div class="container">
+
+        <!-- Post area + Button area -->
+        <div class="row justify-content-center">
+
+            <div class="banner">
+                <img src="data:image/{{ forum_banner_image.extension }};base64,{{ forum_banner_image.base64 }}" alt="{{ forum.name }}">
+                <span class="forum-name">{{ forum.name }}</span>
+            </div>
+        
+            <!-- Post area -->
+            <div class="col-sm-12 col-lg-9">
+                <div class="row post-area">
+
+                    <!-- Create post area -->
+                    <div class="post-area-button-area">
+                        <button id="create_post_button" class="create-post-button" data-gamehub-create-post="{% url 'create_post' forum.idforum %}">
+                            Create a post
+                        </button>
+                    
+                        {% if not follow %}
+                            
+                            <button id="follow_button" class="follow-forum-button" data-gamehub-follow-url="{% url 'follow_forum' forum.idforum %}">
+                                Follow
+                            </button>
+                        
+                        {% else %}
+                            
+                            <button id="follow_button" class="unfollow-forum-button" data-gamehub-follow-url="{% url 'follow_forum' forum.idforum %}">
+                                Unfollow
+                            </button>
+                            
+                        {% endif %}
+
+                        {% if is_admin %}
+                            <div class="admin-forum-buttons">
+                                <button class="add-remove-mod-button" data-gamehub-popup-button="add_moderator">
+                                    Add a moderator
+                                </button>
+                                <button class="add-remove-mod-button" data-gamehub-popup-button="remove_moderator">
+                                    Remove a moderator
+                                </button>
+                                <button class="add-remove-mod-button" data-gamehub-popup-button="delete_forum">
+                                    Delete forum
+                                </button>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    {% for post in posts %}
+
+                        <div class="post" data-gamehub-post-url="{% url 'post' forum.idforum post.idpost %}">
+                        
+                            {% if post.iduser.is_active %}
+                        
+                                <a class="post-username" href="{% url 'user_profile' post.iduser.iduser %}">{{ post.iduser.username }}</a>
+                        
+                            {% else %}
+                        
+                                <a class="post-username" href="{% url 'user_profile' post.iduser.iduser %}" style="pointer-events: none">[deleted user]</a>
+                                
+                            {% endif %}
+                        
+                            <h3 class="post-title">{{ post.title }}</h3>
+                        
+                            {% if post.body is not None %}
+                        
+                                <p class="post-body">{{ post.body|truncatechars:180 }}</p>
+                        
+                            {% endif %}
+                            
+                            {% if post in liked_posts %}
+                                
+                                <button class="post-like-button" data-gamehub-like-button="{% url 'like_post' forum.idforum post.idpost %}">
+                                    <svg class="liked-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke-width="0"></g>
+                                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g>
+                                            <path d="M7.47998 18.35L10.58 20.75C10.98 21.15 11.88 21.35 12.48 21.35H16.28C17.48 21.35 18.78 20.45 19.08 19.25L21.48 11.95C21.98 10.55 21.08 9.34997 19.58 9.34997H15.58C14.98 9.34997 14.48 8.84997 14.58 8.14997L15.08 4.94997C15.28 4.04997 14.68 3.04997 13.78 2.74997C12.98 2.44997 11.98 2.84997 11.58 3.44997L7.47998 9.54997" stroke="transparent" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                            <path d="M2.38 18.35V8.55002C2.38 7.15002 2.98 6.65002 4.38 6.65002H5.38C6.78 6.65002 7.38 7.15002 7.38 8.55002V18.35C7.38 19.75 6.78 20.25 5.38 20.25H4.38C2.98 20.25 2.38 19.75 2.38 18.35Z" stroke="transparent" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                                
+                            {% else %}
+                                
+                                <button class="post-like-button" data-gamehub-like-button="{% url 'like_post' forum.idforum post.idpost %}">
+                                    <svg class="like-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke-width="0"></g>
+                                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g>
+                                            <path d="M7.47998 18.35L10.58 20.75C10.98 21.15 11.88 21.35 12.48 21.35H16.28C17.48 21.35 18.78 20.45 19.08 19.25L21.48 11.95C21.98 10.55 21.08 9.34997 19.58 9.34997H15.58C14.98 9.34997 14.48 8.84997 14.58 8.14997L15.08 4.94997C15.28 4.04997 14.68 3.04997 13.78 2.74997C12.98 2.44997 11.98 2.84997 11.58 3.44997L7.47998 9.54997" stroke="white" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                            <path d="M2.38 18.35V8.55002C2.38 7.15002 2.98 6.65002 4.38 6.65002H5.38C6.78 6.65002 7.38 7.15002 7.38 8.55002V18.35C7.38 19.75 6.78 20.25 5.38 20.25H4.38C2.98 20.25 2.38 19.75 2.38 18.35Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                                
+                            {% endif %}
+                        
+                            {% if post.iduser == user or is_admin or is_moderator %}
+                            
+                                <button id="delete_button" class="post-delete-button" data-gamehub-delete-post-button="{% url 'delete_post' forum.idforum post.idpost %}">
+                                    <svg class="delete-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke-width="0"></g>
+                                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g >
+                                            <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M18.85 9.14001L18.2 19.21C18.09 20.78 18 22 15.21 22H8.79002C6.00002 22 5.91002 20.78 5.80002 19.21L5.15002 9.14001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M10.33 16.5H13.66" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M9.5 12.5H14.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                        
+                            {% endif %}
+                        
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+
+            <!-- Button area -->
+            {% if has_tournaments %}
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="row forum-button-area sticky-top">
+
+                    <a class="forum-button" href="{% url 'find_a_team' forum.idforum %}">Find a team</a>
+                    
+                    {% if team_member %}
+                        
+                        <button id="create_team_button" class="forum-button" data-gamehub-popup-button="leave_team">Create a team</button>
+                        
+                        <a class="forum-button" href="{% url 'team' forum.idforum team.idteam %}">My team</a>
+
+                    {% else %}
+                        
+                        <a id="create_team_button" class="forum-button" href="{% url 'create_a_team' forum.idforum %}">Create a team</a>
+                        
+                        <a class="forum-button" href="{% url 'find_a_team' forum.idforum %}">My team</a>
+                    
+                    {% endif %}
+                    
+                    <a class="forum-button" href="{% url 'list_tournaments' forum.idforum %}">Tournaments</a>
+
+                </div>
+            </div>
+            {% endif %}
+
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,244 @@
+<!-- Original author: Mihajlo Blagojevic -->
+<!-- Version 1.1. author: Viktor Mitrovic -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Team</title>
+    <!-- <link rel="icon" href="./Images/GameHub_Logo.png"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./style_scrollbar.css" type="text/css">
+    <link rel="stylesheet" href="./style_header.css" type="text/css">
+    <link rel="stylesheet" href="./tim.css" type="text/css">
+
+</head>
+<body>
+
+    <div class="chat-page">
+
+        <!-- Navbar -->
+        <div class="container-fluid">
+
+            <!-- Notification modal start (should be removed) -->
+            <div class="modal fade" id="notificationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Notifications</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            You do not have any notifications.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Notification modal end (should be removed) -->
+
+            <nav class="navbar navbar-expand-sm">
+            
+                <a href="./index.html" class="navbar-brand">
+                    <img src="./Images/GameHub_Logo.png" alt="GameHub Logo" class="logo">
+                </a>
+
+                <a href="./index.html" class="gamehub-header">
+                    <h1>GameHub</h1>
+                </a>
+
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <!-- Added data-bs-toggle and data-bs-target (should be removed) -->
+                        <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#notificationModal">
+                            <svg class="notification-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier_trash" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier_trash" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier_trash">
+                                    <path d="M12.02 2.90991C8.70997 2.90991 6.01997 5.59991 6.01997 8.90991V11.7999C6.01997 12.4099 5.75997 13.3399 5.44997 13.8599L4.29997 15.7699C3.58997 16.9499 4.07997 18.2599 5.37997 18.6999C9.68997 20.1399 14.34 20.1399 18.65 18.6999C19.86 18.2999 20.39 16.8699 19.73 15.7699L18.58 13.8599C18.28 13.3399 18.02 12.4099 18.02 11.7999V8.90991C18.02 5.60991 15.32 2.90991 12.02 2.90991Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"></path>
+                                    <path d="M13.87 3.19994C13.56 3.10994 13.24 3.03994 12.91 2.99994C11.95 2.87994 11.03 2.94994 10.17 3.19994C10.46 2.45994 11.18 1.93994 12.02 1.93994C12.86 1.93994 13.58 2.45994 13.87 3.19994Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15.02 19.0601C15.02 20.7101 13.67 22.0601 12.02 22.0601C11.2 22.0601 10.44 21.7201 9.90002 21.1801C9.36002 20.6401 9.02002 19.8801 9.02002 19.0601" stroke="white" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./profile.html" class="nav-link">
+                            <svg class="profile-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier_profile" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier_profile" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier_profile">
+                                    <path d="M12.12 12.78C12.05 12.77 11.96 12.77 11.88 12.78C10.12 12.72 8.71997 11.28 8.71997 9.50998C8.71997 7.69998 10.18 6.22998 12 6.22998C13.81 6.22998 15.28 7.69998 15.28 9.50998C15.27 11.28 13.88 12.72 12.12 12.78Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M18.74 19.3801C16.96 21.0101 14.6 22.0001 12 22.0001C9.40001 22.0001 7.04001 21.0101 5.26001 19.3801C5.36001 18.4401 5.96001 17.5201 7.03001 16.8001C9.77001 14.9801 14.25 14.9801 16.97 16.8001C18.04 17.5201 18.64 18.4401 18.74 19.3801Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                
+            </nav>
+
+            <hr class="navbar-divider">
+
+        </div>
+
+        <div class="chat-main">
+
+
+            <div class="container-fluid d-flex flex-column flex-grow-1">
+                <div class="row justify-content-center flex-grow-1">
+
+                    <div class="game-name-messages-input-area col-8 d-flex flex-column">
+
+                        <div class="game-name-area">
+                            <h3>Apex Legends Team</h3>
+                        </div>
+
+                        <div class="messages">
+                            <div class="my-message">
+                                <div class="body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex saepe nulla accusantium repudiandae sed possimus, id facilis est laborum, accusamus, laudantium eaque autem sint reiciendis doloremque aliquid dolor maiores!
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="body">
+                                    <a class="username" href="./profile.html">Agent Smith</a>
+                                    Lorem, ipsum dolor.
+                                </div>
+                            </div>
+                            <div class="my-message">
+                                <div class="body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, magnam!
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="body">
+                                    <a class="username" href="./profile.html">Trinity</a>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, magnam!
+                                </div>
+                            </div>
+                            <div class="my-message">
+                                <div class="body">
+                                    Lorem, ipsum dolor.
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="body">
+                                    <a class="username" href="./profile.html">Oracle</a>
+                                    Lorem, ipsum dolor.
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="body">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, reiciendis necessitatibus consequatur nobis ex unde fugiat ducimus maiores labore dignissimos sequi quaerat recusandae id in dicta voluptas laboriosam corporis molestiae assumenda reprehenderit! Assumenda expedita, aspernatur, perferendis repellat sapiente quisquam sunt ducimus nostrum doloribus fugiat fuga ea distinctio optio tenetur corporis neque facilis quasi? Qui, labore incidunt! Maiores accusamus voluptas, ipsum doloremque recusandae iure ut non labore quas aliquid reiciendis dicta eaque mollitia esse. Alias, dolores veritatis sit omnis impedit distinctio voluptatem quisquam obcaecati perspiciatis consequuntur, dolorem, deserunt iure amet. Qui, debitis nemo deserunt excepturi, minus ut tempore nobis reiciendis explicabo et magni id reprehenderit tempora sint iste nostrum! Accusantium, aliquam repudiandae. Mollitia labore repellendus enim dolor alias itaque beatae quisquam explicabo aspernatur, voluptatibus dolore voluptatem tenetur expedita rerum consequuntur. Qui, debitis amet? Id distinctio facilis vel optio molestiae perferendis aspernatur suscipit, reiciendis, repellat, minima consequatur laudantium a soluta dignissimos aliquid. Molestiae ipsum laborum, nobis quae officiis dolor sint velit sapiente hic aut nesciunt. Dolor ullam voluptates obcaecati eos aut deleniti sequi perferendis molestias. Voluptas rerum eum atque veritatis debitis soluta vero! Odio laborum modi placeat, repellat mollitia commodi sequi eligendi nisi illum maiores sed doloribus! Commodi, blanditiis repellendus rem exercitationem quam, quidem placeat reprehenderit veritatis delectus, incidunt ad ab corrupti ex iste! Consequatur est ipsa in rem quis eaque quasi saepe temporibus doloribus excepturi sapiente atque unde eveniet aliquid praesentium error dolorem harum dicta modi eos dolor, incidunt deserunt ad dolores? Voluptate deserunt repellat distinctio non aperiam laudantium saepe quos reprehenderit tempore ullam nisi nobis natus beatae debitis excepturi, magni alias, necessitatibus placeat nostrum temporibus ad. Dignissimos a consectetur dicta iure quisquam debitis dolorum dolorem labore alias, eaque aspernatur quidem eos quibusdam unde harum rem, quia, nisi impedit cupiditate exercitationem quaerat libero omnis aliquam perspiciatis. Natus quaerat deleniti nesciunt sequi?
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-area">
+                            
+                            <div class="input-new-message">
+                                <input class="input-box" type="text" placeholder="Type a message...">
+                            </div>
+
+                            <button class="send-button">
+                                <svg class="send-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier_send_button" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier_send_button" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier_send_button">
+                                        <path d="M9.51002 4.23001L18.07 8.51001C21.91 10.43 21.91 13.57 18.07 15.49L9.51002 19.77C3.75002 22.65 1.40002 20.29 4.28002 14.54L5.15002 12.81C5.37002 12.37 5.37002 11.64 5.15002 11.2L4.28002 9.46001C1.40002 3.71001 3.76002 1.35001 9.51002 4.23001Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M5.44 12H10.84" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                            
+
+                            
+
+                        </div>
+
+                    </div>
+    
+                    <div class="col-2 member-area">
+                        <h1>Matrix</h1>
+                        <h5>Members</h5>
+
+                        <div class="member">
+                            <a href="./profile.html" class="profile-picture-link">
+                                <svg class="profile-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier_profile_1" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier_profile_1" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier_profile_1">
+                                        <path d="M12.12 12.78C12.05 12.77 11.96 12.77 11.88 12.78C10.12 12.72 8.71997 11.28 8.71997 9.50998C8.71997 7.69998 10.18 6.22998 12 6.22998C13.81 6.22998 15.28 7.69998 15.28 9.50998C15.27 11.28 13.88 12.72 12.12 12.78Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M18.74 19.3801C16.96 21.0101 14.6 22.0001 12 22.0001C9.40001 22.0001 7.04001 21.0101 5.26001 19.3801C5.36001 18.4401 5.96001 17.5201 7.03001 16.8001C9.77001 14.9801 14.25 14.9801 16.97 16.8001C18.04 17.5201 18.64 18.4401 18.74 19.3801Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="./profile.html" class="profile-link">Morpheus</a>
+                        </div>
+
+                        <div class="member">
+                            <a href="./profile.html" class="profile-picture-link">
+                                <svg class="profile-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier_profile_2" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier_profile_2" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier_profile_2">
+                                        <path d="M12.12 12.78C12.05 12.77 11.96 12.77 11.88 12.78C10.12 12.72 8.71997 11.28 8.71997 9.50998C8.71997 7.69998 10.18 6.22998 12 6.22998C13.81 6.22998 15.28 7.69998 15.28 9.50998C15.27 11.28 13.88 12.72 12.12 12.78Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M18.74 19.3801C16.96 21.0101 14.6 22.0001 12 22.0001C9.40001 22.0001 7.04001 21.0101 5.26001 19.3801C5.36001 18.4401 5.96001 17.5201 7.03001 16.8001C9.77001 14.9801 14.25 14.9801 16.97 16.8001C18.04 17.5201 18.64 18.4401 18.74 19.3801Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="./profile.html" class="profile-link">Trinity</a>
+                        </div>
+
+                        <div class="member">
+                            <a href="./profile.html" class="profile-picture-link">
+                                <svg class="profile-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier_profile_3" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier_profile_3" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier_profile_3">
+                                        <path d="M12.12 12.78C12.05 12.77 11.96 12.77 11.88 12.78C10.12 12.72 8.71997 11.28 8.71997 9.50998C8.71997 7.69998 10.18 6.22998 12 6.22998C13.81 6.22998 15.28 7.69998 15.28 9.50998C15.27 11.28 13.88 12.72 12.12 12.78Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M18.74 19.3801C16.96 21.0101 14.6 22.0001 12 22.0001C9.40001 22.0001 7.04001 21.0101 5.26001 19.3801C5.36001 18.4401 5.96001 17.5201 7.03001 16.8001C9.77001 14.9801 14.25 14.9801 16.97 16.8001C18.04 17.5201 18.64 18.4401 18.74 19.3801Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="./profile.html" class="profile-link">Agent Smith</a>
+                        </div>
+
+                        <div class="member">
+                            <a href="./profile.html" class="profile-picture-link">
+                                <svg class="profile-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier_profile_4" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier_profile_4" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier_profile_4">
+                                        <path d="M12.12 12.78C12.05 12.77 11.96 12.77 11.88 12.78C10.12 12.72 8.71997 11.28 8.71997 9.50998C8.71997 7.69998 10.18 6.22998 12 6.22998C13.81 6.22998 15.28 7.69998 15.28 9.50998C15.27 11.28 13.88 12.72 12.12 12.78Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M18.74 19.3801C16.96 21.0101 14.6 22.0001 12 22.0001C9.40001 22.0001 7.04001 21.0101 5.26001 19.3801C5.36001 18.4401 5.96001 17.5201 7.03001 16.8001C9.77001 14.9801 14.25 14.9801 16.97 16.8001C18.04 17.5201 18.64 18.4401 18.74 19.3801Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="./profile.html" class="profile-link">Oracle</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

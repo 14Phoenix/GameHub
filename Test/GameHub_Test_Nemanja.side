@@ -1,0 +1,1055 @@
+{
+  "id": "6805c078-6a45-4253-b55b-b13f436234ff",
+  "version": "2.0",
+  "name": "GameHub_Test_Nemanja",
+  "url": "http://localhost:8000/forum/7/post/16",
+  "tests": [{
+    "id": "7d849168-2d79-482a-a959-a054e38c2f11",
+    "name": "Kreiranje_Objava_Na_Forumu - Korisnik uspešno kreira objavu",
+    "commands": [{
+      "id": "55bf8301-a746-489a-af4f-0809f470e6ee",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/forum/7",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff76a44b-1545-4ab6-8bac-980843c09303",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04388320-81de-46a0-b570-5735c0b0305c",
+      "comment": "",
+      "command": "click",
+      "target": "id=create_post_button",
+      "targets": [
+        ["id=create_post_button", "id"],
+        ["css=#create_post_button", "css:finder"],
+        ["xpath=//button[@id='create_post_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create a post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5cede434-c47d-4479-80a1-1d6aeef8bdfd",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.new-post-title", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "acabe50f-be3a-4d1c-88af-0daf7169a792",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.new-post-title", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Naslov"
+    }, {
+      "id": "6cc51483-5935-4939-8791-8da81929048f",
+      "comment": "",
+      "command": "click",
+      "target": "name=body",
+      "targets": [
+        ["name=body", "name"],
+        ["css=.new-post-body", "css:finder"],
+        ["xpath=//textarea[@name='body']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73fd95bb-8de2-4898-b56f-4fbf3465f4f3",
+      "comment": "",
+      "command": "type",
+      "target": "name=body",
+      "targets": [
+        ["name=body", "name"],
+        ["css=.new-post-body", "css:finder"],
+        ["xpath=//textarea[@name='body']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "telo"
+    }, {
+      "id": "7704cb09-aad2-4db6-aaf6-210ce31e7950",
+      "comment": "",
+      "command": "click",
+      "target": "css=.new-post-button-post",
+      "targets": [
+        ["css=.new-post-button-post", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='create_post_buttons']/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc2ffb79-188f-47b8-a375-dc9227207c8d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.post:nth-child(2) > .post-title",
+      "targets": [
+        ["css=.post:nth-child(2) > .post-title", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Naslov')]", "xpath:innerText"]
+      ],
+      "value": "Naslov"
+    }, {
+      "id": "c0b49164-16ce-42f8-93b4-1d1f494d6808",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.post:nth-child(2) > .post-body",
+      "targets": [
+        ["css=.post:nth-child(2) > .post-body", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'telo')]", "xpath:innerText"]
+      ],
+      "value": "telo"
+    }, {
+      "id": "5862d8f5-0080-4df5-8d29-aeb167403755",
+      "comment": "",
+      "command": "click",
+      "target": "css=.post:nth-child(2) .delete-icon",
+      "targets": [
+        ["css=.post:nth-child(2) .delete-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0304e0e-ba08-4ae3-8150-9402939975da",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "54740308-c19b-4de7-9f13-fd9d381f34b5",
+    "name": "Kreiranje_Objava_Na_Forumu - Korisnik ne uspeva da kreira objavu",
+    "commands": [{
+      "id": "3d77071a-1e40-48c6-a0e6-75d50f471740",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/forum/7",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0bae9cd-f4f9-4709-9f59-058bf9b66d56",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a32a87a-6a65-4b71-adcd-57932ae8385a",
+      "comment": "",
+      "command": "click",
+      "target": "id=create_post_button",
+      "targets": [
+        ["id=create_post_button", "id"],
+        ["css=#create_post_button", "css:finder"],
+        ["xpath=//button[@id='create_post_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create a post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aea5a8e8-fcc6-4a82-97e1-5a473d4fb6e6",
+      "comment": "",
+      "command": "click",
+      "target": "name=body",
+      "targets": [
+        ["name=body", "name"],
+        ["css=.new-post-body", "css:finder"],
+        ["xpath=//textarea[@name='body']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a45f841-bd1b-4815-b7ad-2ac679234c24",
+      "comment": "",
+      "command": "type",
+      "target": "name=body",
+      "targets": [
+        ["name=body", "name"],
+        ["css=.new-post-body", "css:finder"],
+        ["xpath=//textarea[@name='body']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "telo"
+    }, {
+      "id": "7cf652f4-d89e-409f-8141-65864f223bfa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.new-post-button-post",
+      "targets": [
+        ["css=.new-post-button-post", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='create_post_buttons']/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f264c6e-480e-4731-ab92-bae634180182",
+      "comment": "",
+      "command": "click",
+      "target": "id=create_post_cancel",
+      "targets": [
+        ["id=create_post_cancel", "id"],
+        ["css=#create_post_cancel", "css:finder"],
+        ["xpath=//button[@id='create_post_cancel']", "xpath:attributes"],
+        ["xpath=//div[@id='create_post_buttons']/button[2]", "xpath:idRelative"],
+        ["xpath=//form/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Cancel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a1b7010-960f-4a9d-b473-d6f6dd93b053",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.post:nth-child(2) > .post-title",
+      "targets": [
+        ["css=.post:nth-child(2) > .post-title", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Looking for a duo partner')]", "xpath:innerText"]
+      ],
+      "value": "Looking for a duo partner"
+    }, {
+      "id": "6299c5bf-7719-4243-ba4d-49378317751a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d780b2c0-40ad-428e-9d6c-156ef935b322",
+    "name": "Kreiranje_Objava_Na_Forumu - Korisnik odustaje od kreiranja objave",
+    "commands": [{
+      "id": "38858091-6392-42b9-8489-2839dce992ab",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/forum/7",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6db5054-5f8e-4a85-98ca-296572f5db92",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59208183-a3a1-41fe-b379-2955a769eb9b",
+      "comment": "",
+      "command": "click",
+      "target": "id=create_post_button",
+      "targets": [
+        ["id=create_post_button", "id"],
+        ["css=#create_post_button", "css:finder"],
+        ["xpath=//button[@id='create_post_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create a post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6da7d107-be52-424d-a262-f63765be1ae4",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.new-post-title", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1216b72b-c5a0-44d8-9d0a-c1f04ac801f1",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.new-post-title", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Naslov"
+    }, {
+      "id": "b64d3444-eeaa-46d3-a147-c0aa8bf56e3c",
+      "comment": "",
+      "command": "click",
+      "target": "name=body",
+      "targets": [
+        ["name=body", "name"],
+        ["css=.new-post-body", "css:finder"],
+        ["xpath=//textarea[@name='body']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0321992f-f20b-4ab2-a4be-e46619047d43",
+      "comment": "",
+      "command": "type",
+      "target": "name=body",
+      "targets": [
+        ["name=body", "name"],
+        ["css=.new-post-body", "css:finder"],
+        ["xpath=//textarea[@name='body']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "telo"
+    }, {
+      "id": "2117dad3-8e68-4854-ac9b-d2fe5f42b800",
+      "comment": "",
+      "command": "click",
+      "target": "id=create_post_cancel",
+      "targets": [
+        ["id=create_post_cancel", "id"],
+        ["css=#create_post_cancel", "css:finder"],
+        ["xpath=//button[@id='create_post_cancel']", "xpath:attributes"],
+        ["xpath=//div[@id='create_post_buttons']/button[2]", "xpath:idRelative"],
+        ["xpath=//form/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Cancel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "def9c8f3-34be-4a67-a856-8dd3a7ea92d3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.post:nth-child(2) > .post-title",
+      "targets": [
+        ["css=.post:nth-child(2) > .post-title", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Looking for a duo partner')]", "xpath:innerText"]
+      ],
+      "value": "Looking for a duo partner"
+    }, {
+      "id": "dcd83f04-06df-4105-a9bc-e1333c6cd871",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4e4a63f7-20d2-49b4-b170-d88a85c37674",
+    "name": " Brisanje_Objava_Na_Forumu - Korisnik briše svoju objavu sa stranice foruma",
+    "commands": [{
+      "id": "10977acf-df55-451a-9669-50da52b6c271",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/forum/7",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6bebd35f-3109-4989-bec2-0c4404c8e4c3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c57f8555-dabe-403b-aa48-c15c1e10690a",
+      "comment": "",
+      "command": "click",
+      "target": "id=create_post_button",
+      "targets": [
+        ["id=create_post_button", "id"],
+        ["css=#create_post_button", "css:finder"],
+        ["xpath=//button[@id='create_post_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create a post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b396995-b162-4167-af29-f9fc66331624",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.new-post-title", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7681cbba-67c1-47da-91f8-208e6dedbfb0",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.new-post-title", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Test objava"
+    }, {
+      "id": "782c797a-c1f3-4745-8ee8-e24e1d25c529",
+      "comment": "",
+      "command": "click",
+      "target": "name=body",
+      "targets": [
+        ["name=body", "name"],
+        ["css=.new-post-body", "css:finder"],
+        ["xpath=//textarea[@name='body']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d08026ff-83b7-424f-9be3-057d5582294a",
+      "comment": "",
+      "command": "type",
+      "target": "name=body",
+      "targets": [
+        ["name=body", "name"],
+        ["css=.new-post-body", "css:finder"],
+        ["xpath=//textarea[@name='body']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "telo"
+    }, {
+      "id": "27582fff-b3e8-48e1-ab27-3d677e42497d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.new-post-button-post",
+      "targets": [
+        ["css=.new-post-button-post", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='create_post_buttons']/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a644f2f-325a-4eb8-a917-dcfad69d88f8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.post:nth-child(2) > .post-title",
+      "targets": [
+        ["css=.post:nth-child(2) > .post-title", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Test objava')]", "xpath:innerText"]
+      ],
+      "value": "Test objava"
+    }, {
+      "id": "6bb06a96-367c-452d-81cd-5a93a7ba2b76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.post:nth-child(2) .delete-icon",
+      "targets": [
+        ["css=.post:nth-child(2) .delete-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4f0c9c5-bd41-49f2-9164-bc11a0c19dc6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.post:nth-child(2) > .post-title",
+      "targets": [
+        ["css=.post:nth-child(2) > .post-title", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Looking for a duo partner')]", "xpath:innerText"]
+      ],
+      "value": "Looking for a duo partner"
+    }, {
+      "id": "6930876c-90b8-4fe0-86b8-232d7b10e59d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "40596805-9fdb-484c-9e87-69a9cb0d0213",
+    "name": " Brisanje_Objava_Na_Forumu - Korisnik briše svoju objavu sa stranice te objave",
+    "commands": [{
+      "id": "e5794d69-2efd-40d2-8791-276658e61b92",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/forum/7",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23d182e2-82f5-4822-85c3-d7886cb78e0b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52cfdff9-e7fc-484a-920d-36b3d26492d5",
+      "comment": "",
+      "command": "click",
+      "target": "id=create_post_button",
+      "targets": [
+        ["id=create_post_button", "id"],
+        ["css=#create_post_button", "css:finder"],
+        ["xpath=//button[@id='create_post_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create a post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f97152e-cce2-4f20-a751-090a35ea614e",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.new-post-title", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09f42754-0002-4ed3-9c9e-05fccece73d7",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.new-post-title", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Test objava"
+    }, {
+      "id": "f87af02e-bbe2-4360-8f6b-b01d9af6b8b5",
+      "comment": "",
+      "command": "click",
+      "target": "name=body",
+      "targets": [
+        ["name=body", "name"],
+        ["css=.new-post-body", "css:finder"],
+        ["xpath=//textarea[@name='body']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33dc1147-3b90-4b34-9463-c5e2b79e87c1",
+      "comment": "",
+      "command": "type",
+      "target": "name=body",
+      "targets": [
+        ["name=body", "name"],
+        ["css=.new-post-body", "css:finder"],
+        ["xpath=//textarea[@name='body']", "xpath:attributes"],
+        ["xpath=//form[@id='create_post_form']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "telo"
+    }, {
+      "id": "0e729d5a-102e-428b-8adc-baeb26f5abbf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.new-post-button-post",
+      "targets": [
+        ["css=.new-post-button-post", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='create_post_buttons']/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "40c73d16-17f5-4818-a053-bf201c9713f8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.post:nth-child(2) > .post-title",
+      "targets": [
+        ["css=.post:nth-child(2) > .post-title", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Test objava')]", "xpath:innerText"]
+      ],
+      "value": "Test objava"
+    }, {
+      "id": "33e8942d-07cf-45fb-b748-8e8d43d26320",
+      "comment": "",
+      "command": "click",
+      "target": "css=.post:nth-child(2) > .post-title",
+      "targets": [
+        ["css=.post:nth-child(2) > .post-title", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Test objava')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f38dbb9-ca62-4fc1-b678-964e5d3663e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.single-post-delete-icon",
+      "targets": [
+        ["css=.single-post-delete-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3e5dc79-45ee-4ab7-9f76-2ad8ca2c5338",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.post:nth-child(2) > .post-title",
+      "targets": [
+        ["css=.post:nth-child(2) > .post-title", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Looking for a duo partner')]", "xpath:innerText"]
+      ],
+      "value": "Looking for a duo partner"
+    }, {
+      "id": "c97cf224-e9ec-4954-8708-5fe86a383b7a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "94cef058-3047-415a-9ad2-c3b0a9c4c867",
+    "name": "Pracenje_I_Otpracivanje_Foruma - Korisnik zapraćuje forum",
+    "commands": [{
+      "id": "1dbc7ccc-37cc-4467-b5b4-09a5a7e17b73",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/forum/1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd7c17d4-87bf-4249-958c-ff05faa44930",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "784c0003-4e57-4d7c-9b77-34215802fa22",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=follow_button",
+      "targets": [
+        ["id=follow_button", "id"],
+        ["css=#follow_button", "css:finder"],
+        ["xpath=//button[@id='follow_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Follow')]", "xpath:innerText"]
+      ],
+      "value": "Follow"
+    }, {
+      "id": "3625f7fa-1045-42b8-b0db-511e98c514c3",
+      "comment": "",
+      "command": "click",
+      "target": "id=follow_button",
+      "targets": [
+        ["id=follow_button", "id"],
+        ["css=#follow_button", "css:finder"],
+        ["xpath=//button[@id='follow_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Follow')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "10ae8adf-7f51-47d3-b406-f49c02ba6ca5",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=follow_button",
+      "targets": [
+        ["id=follow_button", "id"],
+        ["css=#follow_button", "css:finder"],
+        ["xpath=//button[@id='follow_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Unfollow')]", "xpath:innerText"]
+      ],
+      "value": "Unfollow"
+    }, {
+      "id": "f1819ac7-2f51-471b-9c3e-678e4f7afe0a",
+      "comment": "",
+      "command": "click",
+      "target": "id=follow_button",
+      "targets": [
+        ["id=follow_button", "id"],
+        ["css=#follow_button", "css:finder"],
+        ["xpath=//button[@id='follow_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Unfollow')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bffa63ab-15f5-4ecb-af87-f84f75eec616",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7241bb26-8e4a-4063-9a80-aeff141f3ef1",
+    "name": "Pracenje_I_Otpracivanje_Foruma - Korisnik otpraćuje forum",
+    "commands": [{
+      "id": "558508ee-2e7b-48ee-99d2-662e7d004112",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/forum/7",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96fdbd03-3444-4485-ba81-d27b33c3c55e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4debad0-2d3e-4f3d-9e56-100e596204eb",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=follow_button",
+      "targets": [
+        ["id=follow_button", "id"],
+        ["css=#follow_button", "css:finder"],
+        ["xpath=//button[@id='follow_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Unfollow')]", "xpath:innerText"]
+      ],
+      "value": "Unfollow"
+    }, {
+      "id": "4e1983c0-f548-4dab-a81e-25df2cefd744",
+      "comment": "",
+      "command": "click",
+      "target": "id=follow_button",
+      "targets": [
+        ["id=follow_button", "id"],
+        ["css=#follow_button", "css:finder"],
+        ["xpath=//button[@id='follow_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Unfollow')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "892a6579-9c66-424d-a779-9c7d61bd0a41",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=follow_button",
+      "targets": [
+        ["id=follow_button", "id"],
+        ["css=#follow_button", "css:finder"],
+        ["xpath=//button[@id='follow_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Follow')]", "xpath:innerText"]
+      ],
+      "value": "Follow"
+    }, {
+      "id": "104c5e6e-fdef-4bf1-9352-15ea74a0367d",
+      "comment": "",
+      "command": "click",
+      "target": "id=follow_button",
+      "targets": [
+        ["id=follow_button", "id"],
+        ["css=#follow_button", "css:finder"],
+        ["xpath=//button[@id='follow_button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Follow')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a444b45-86d8-47a0-a2e0-f78ce6700c06",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f05b730e-8f0c-4c56-b75d-56f8a016605e",
+    "name": "Stvaranje_Komentara_Na_Objavi - Korisnik uspešno stvara komentar na objavi",
+    "commands": [{
+      "id": "b8684043-9c64-4cf1-9b6b-b7dd86e2a252",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/forum/7/post/16",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fac049b8-9c17-459f-93d1-81662e2ab1d7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e7e002e-44ae-487c-8686-cac3f9d0eead",
+      "comment": "",
+      "command": "click",
+      "target": "id=leave_a_comment_button",
+      "targets": [
+        ["id=leave_a_comment_button", "id"],
+        ["css=#leave_a_comment_button", "css:finder"],
+        ["xpath=//button[@id='leave_a_comment_button']", "xpath:attributes"],
+        ["xpath=//div[@id='leave_a_comment_wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Leave a comment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "469a940e-bca9-4e0c-8c29-9bef1d2e465f",
+      "comment": "",
+      "command": "click",
+      "target": "id=comment_body",
+      "targets": [
+        ["id=comment_body", "id"],
+        ["css=#comment_body", "css:finder"],
+        ["xpath=//textarea[@id='comment_body']", "xpath:attributes"],
+        ["xpath=//div[@id='leave_a_comment_carrier']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b736729-7a45-4a4d-81fe-251208c8b0b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=comment_body",
+      "targets": [
+        ["id=comment_body", "id"],
+        ["css=#comment_body", "css:finder"],
+        ["xpath=//textarea[@id='comment_body']", "xpath:attributes"],
+        ["xpath=//div[@id='leave_a_comment_carrier']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Test comment"
+    }, {
+      "id": "acf31a81-1e6d-482c-bce4-37b259f2cf89",
+      "comment": "",
+      "command": "click",
+      "target": "id=post_comment_button",
+      "targets": [
+        ["id=post_comment_button", "id"],
+        ["css=#post_comment_button", "css:finder"],
+        ["xpath=//button[@id='post_comment_button']", "xpath:attributes"],
+        ["xpath=//div[@id='create_comment_buttons']/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Post comment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ce4fd94-a2e2-4488-8b84-bb5327faa00d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.comment:nth-child(4) > .comment-body",
+      "targets": [
+        ["css=.comment:nth-child(4) > .comment-body", "css:finder"],
+        ["xpath=//div[@id='comment_section']/div[4]/p", "xpath:idRelative"],
+        ["xpath=//div[4]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Test comment')]", "xpath:innerText"]
+      ],
+      "value": "Test comment"
+    }, {
+      "id": "dd0fdb53-9f7a-476b-b2f8-bf0c07544b13",
+      "comment": "",
+      "command": "click",
+      "target": "css=.comment:nth-child(4) .single-post-delete-icon",
+      "targets": [
+        ["css=.comment:nth-child(4) .single-post-delete-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "01984cfa-8881-41b4-b991-c1c9f790ba64",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "770595f0-8d73-4ee2-8be5-91d556cd1880",
+    "name": "Stvaranje_Komentara_Na_Objavi - Korisnik ne uspeva da stvori komentar",
+    "commands": [{
+      "id": "b19a0d30-b99d-46f6-a89e-5a82c1a789a1",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/forum/7/post/16",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ad22e0c-7c37-4c67-bae5-4d2e42f1168a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a6754c5b-0c64-4929-a574-afd9d9495dc3",
+      "comment": "",
+      "command": "click",
+      "target": "id=leave_a_comment_button",
+      "targets": [
+        ["id=leave_a_comment_button", "id"],
+        ["css=#leave_a_comment_button", "css:finder"],
+        ["xpath=//button[@id='leave_a_comment_button']", "xpath:attributes"],
+        ["xpath=//div[@id='leave_a_comment_wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Leave a comment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf804d3c-24d9-4a5a-aca5-0eb7f59ae110",
+      "comment": "",
+      "command": "click",
+      "target": "id=post_comment_button",
+      "targets": [
+        ["id=post_comment_button", "id"],
+        ["css=#post_comment_button", "css:finder"],
+        ["xpath=//button[@id='post_comment_button']", "xpath:attributes"],
+        ["xpath=//div[@id='create_comment_buttons']/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Post comment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f15e76fa-4696-48ec-b6fe-166881c136dc",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.comment:nth-child(4)",
+      "targets": [
+        ["css=.comment:nth-child(3) > .comment-body", "css:finder"],
+        ["xpath=//div[@id='comment_section']/div[3]/p", "xpath:idRelative"],
+        ["xpath=//div[3]/p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d10e9139-4f2c-4af7-90d6-43121e15fd1c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c51b3e6e-f568-40b9-8899-3413e6721a96",
+    "name": "Stvaranje_Komentara_Na_Objavi - Korisnik odustaje od stvaranja komentara",
+    "commands": [{
+      "id": "81a88725-5849-44ed-9297-2c50d4c622e0",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/forum/7/post/16",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38083355-139f-4248-972a-6abf1e4a476e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8bb498a0-94d7-4b5e-a81f-e6bc7c5df1ab",
+      "comment": "",
+      "command": "click",
+      "target": "id=leave_a_comment_button",
+      "targets": [
+        ["id=leave_a_comment_button", "id"],
+        ["css=#leave_a_comment_button", "css:finder"],
+        ["xpath=//button[@id='leave_a_comment_button']", "xpath:attributes"],
+        ["xpath=//div[@id='leave_a_comment_wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Leave a comment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e5ae7dd-fe18-491d-b4cf-8d2b33201491",
+      "comment": "",
+      "command": "click",
+      "target": "id=comment_body",
+      "targets": [
+        ["id=comment_body", "id"],
+        ["css=#comment_body", "css:finder"],
+        ["xpath=//textarea[@id='comment_body']", "xpath:attributes"],
+        ["xpath=//div[@id='leave_a_comment_carrier']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "161c8706-0f87-4cdb-9c1f-620d3f228a8d",
+      "comment": "",
+      "command": "type",
+      "target": "id=comment_body",
+      "targets": [
+        ["id=comment_body", "id"],
+        ["css=#comment_body", "css:finder"],
+        ["xpath=//textarea[@id='comment_body']", "xpath:attributes"],
+        ["xpath=//div[@id='leave_a_comment_carrier']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Test comment"
+    }, {
+      "id": "6569023b-42ed-451f-8b41-53e9367472c1",
+      "comment": "",
+      "command": "click",
+      "target": "id=cancel_leave_a_comment",
+      "targets": [
+        ["id=cancel_leave_a_comment", "id"],
+        ["css=#cancel_leave_a_comment", "css:finder"],
+        ["xpath=//button[@id='cancel_leave_a_comment']", "xpath:attributes"],
+        ["xpath=//div[@id='create_comment_buttons']/div/button", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cancel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64a6eec1-80a2-45ec-85ae-a788d4002189",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.comment:nth-child(4)",
+      "targets": [
+        ["css=.comment:nth-child(3) > .comment-body", "css:finder"],
+        ["xpath=//div[@id='comment_section']/div[3]/p", "xpath:idRelative"],
+        ["xpath=//div[3]/p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd548fd5-f330-410f-9d10-58bbb1957a07",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "efdf4e7e-5c8e-4b35-bef3-4630eeb02f7e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8000/", "http://localhost:8000/forum/7", "http://localhost:8000/forum/7/post/16", "http://localhost:8000/forum/1"],
+  "plugins": []
+}

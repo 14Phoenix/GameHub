@@ -1,0 +1,222 @@
+/* Author: Viktor Mitrovic 0296/2021 */
+
+:root {
+    /* Background colors */
+    --bg-color: #1a1a1b;
+
+    /* Log In button colors */
+    --logo-red: #a2170f;
+    --logo-red-button-hover: #73100b;
+    --logo-letter: white;
+
+    /* GameHub header colors */
+    --gamehub-header-letter: white;
+
+    /* Banner colors */
+    --banner-letter: white;
+
+    /* Post area colors */
+    --post-area-border-color: white;
+
+    /* Create post colors */
+    --create-post-letter: white;
+
+    /* Single post colors */
+    --post-bg-color: #1e2123;
+    --post-border-color: #292c30;
+    --post-hover-bg-color: var(--post-border-color);
+
+    
+    --single-post-body-letter: white;
+    --post-title-letter: white;
+    --post-username-letter: white;
+    --post-like-button-letter: white;
+    --post-forum-name-letter: white;
+
+    /* Button area colors */
+
+    --follow-button-hover-bg: #dfdfdf;
+
+    /* Single forum button colors */
+
+    --forum-button-bg-color: var(--post-bg-color);
+    --forum-button-border-color: var(--post-border-color);
+    --forum-button-hover-bg-color: var(--post-hover-bg-color);
+    
+
+    --forum-button-letter: white;
+
+    /* User info colors */
+
+    --user-info-header-letter: #a8a8a8;
+    --user-info-data-letter: white;
+
+    /* Edit button colors */
+    --edit-button-bg: #00a100;
+    --edit-button-hover-bg: #008500;
+    
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+svg.profile-picture-placeholder {
+    width: 250px;
+    display: inline-block;
+}
+
+img.user-profile-picture {
+    width: 250px;
+    height: 250px;
+    padding: 0;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: inline-block;
+}
+
+.user-info-data {
+    border: 1px solid var(--post-border-color);
+    border-radius: 5px;
+    background-color: var(--post-bg-color);
+
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.user-info-header {
+    color: var(--user-info-header-letter);
+    font-variant: small-caps;
+}
+
+.user-info-data-username {
+    color: var(--user-info-data-letter);
+    font-size: 34px;
+}
+
+.user-info-data-about {
+    color: var(--user-info-data-letter);
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    resize: none;
+    font-size: 20px;
+}
+
+.form-edit-section {
+    display: flex;
+    gap: 5px;
+}
+
+.form-edit-section .edit-button {
+    border: 1px solid;
+    border-color: var(--edit-button-bg);
+    border-radius: 20px;
+
+    color: white;
+    background-color: var(--edit-button-bg);
+
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.form-edit-section .edit-button:hover {
+    background-color: var(--edit-button-hover-bg);
+}
+
+.form-edit-section .delete-account-button {
+    border: 1px solid white;
+    border-radius: 20px;
+
+    color: white;
+    background-color: var(--post-bg-color);
+
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.form-edit-section .delete-account-button:hover {
+    background-color: var(--post-hover-bg-color);
+}
+
+.form-save-cancel-section {
+    display: flex;
+    gap: 5px;
+}
+
+.form-save-cancel-section .save-button {
+    border: 1px solid;
+    border-color: var(--logo-red);
+    border-radius: 20px;
+
+    color: var(--post-like-button-letter);
+    background-color: var(--logo-red);
+
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    user-select: none;
+}
+
+.form-save-cancel-section .save-button:hover {
+    background-color: var(--logo-red-button-hover);
+}
+
+.form-save-cancel-section .cancel-button {
+    border: 1px solid;
+    border-color: white;
+    border-radius: 20px;
+
+    color: var(--logo-red);
+    background-color: white;
+
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    user-select: none;
+}
+
+.form-save-cancel-section .cancel-button:hover {
+    background-color: var(--follow-button-hover-bg);
+}
+
+/* Sign out */
+.sign-out-button {
+    border: 1px solid white;
+    border-radius: 20px;
+
+    color: white;
+    background-color: var(--post-bg-color);
+
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    margin: 0px;
+
+    user-select: none;
+}
+
+.sign-out-button:hover {
+    background-color: var(--post-hover-bg-color);
+}
+
+.messages {
+    color: red;
+    font-size: 20px;
+}

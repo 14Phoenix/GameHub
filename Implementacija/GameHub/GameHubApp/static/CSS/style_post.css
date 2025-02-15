@@ -1,0 +1,260 @@
+/* Author: Viktor Mitrovic 0296/2021 */
+
+:root {
+    /* Background colors */
+    --bg-color: #1a1a1b;
+
+    /* Log In button colors */
+    --logo-red: #a2170f;
+    --logo-red-button-hover: #73100b;
+    --logo-letter: white;
+
+    /* GameHub header colors */
+    --gamehub-header-letter: white;
+
+    /* Banner colors */
+    --banner-letter: white;
+
+    /* Post area colors */
+    --post-area-border-color: white;
+
+    /* Create post colors */
+    --create-post-letter: white;
+
+    /* Single post colors */
+    --post-bg-color: #1e2123;
+    --post-border-color: #292c30;
+    --post-hover-bg-color: var(--post-border-color);
+
+    --follow-button-hover-bg: #dfdfdf;
+
+    --single-post-body-letter: white;
+    --post-title-letter: white;
+    --post-username-letter: white;
+    --post-like-button-letter: white;
+    --post-forum-name-letter: white;
+
+    /* Button area colors */
+
+
+    /* Single forum button colors */
+
+    --forum-button-bg-color: var(--post-bg-color);
+    --forum-button-border-color: var(--post-border-color);
+    --forum-button-hover-bg-color: var(--post-hover-bg-color);
+    
+
+    --forum-button-letter: white;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.single-post-area {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.single-post {
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: var(--post-border-color);
+    
+    background-color: var(--post-bg-color);
+    
+    padding-right: 10px;
+    padding-left: 10px;
+
+    /* margin-bottom: 5px; */
+}
+
+.single-post-forum-name {
+    color: var(--post-forum-name-letter);
+    font-size: 15px;
+    text-decoration: none;
+    
+    display: inline-block;
+
+    margin-top: 2px;
+    margin-bottom: 0px;
+
+}
+
+.single-post-forum-name:hover {
+    text-decoration: underline;
+}
+
+.single-post-username {
+    color: var(--post-username-letter);
+    font-size: 15px;
+    text-decoration: none;
+
+    display: inline-block;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.single-post-username:hover {
+    text-decoration: underline;
+}
+
+.single-post-title {
+    color: var(--post-title-letter);
+
+    margin-top: 0px;
+    margin-bottom: 5px;
+    
+}
+
+.single-post-body {
+    color: var(--single-post-body-letter);
+
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.single-post-like-button {
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+}
+
+.single-post-like-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.single-post-like-icon {
+    fill: none;
+    stroke: white;
+    display: block;
+}
+
+.single-post-liked-icon {
+    fill: white;
+    stroke: black;
+    display: block;
+}
+
+.single-post-delete-button {
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+
+    float: right;
+}
+
+.single-post-delete-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.single-post-delete-icon {
+    fill: none;
+    stroke: white;
+    display: block;
+}
+
+.leave-a-comment-button-wrapper {
+    margin: 20px 5px 20px 5px;
+}
+
+.leave-a-comment-button {
+    border: 1px solid;
+    border-color: var(--logo-red);
+    border-radius: 20px;
+
+    color: var(--post-like-button-letter);
+    background-color: var(--logo-red);
+
+    padding: 10px 15px 10px 15px;
+
+    font-size: 15px;
+
+    user-select: none;
+}
+
+.leave-a-comment-button:hover {
+    background-color: var(--logo-red-button-hover);
+}
+
+.leave-a-comment-cancel {
+    border: 1px solid;
+    border-color: white;
+    border-radius: 20px;
+    color: var(--logo-red);
+    background-color: white;
+    padding: 10px 15px 10px 15px;
+    font-size: 15px;
+    user-select: none;
+}
+
+.leave-a-comment-cancel:hover {
+    background-color: var(--follow-button-hover-bg);
+}
+
+.leave-a-comment-carrier {
+    display: none;
+    padding: 0px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.leave-a-comment-input-body {
+    width: 100%;
+
+    border: 1px solid white;
+    border-radius: 5px;
+
+    color: var(--single-post-body-letter);
+    background-color: var(--post-bg-color);
+
+    resize: none;
+}
+
+.create-comment-buttons {
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
+
+.comment-section {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.comment {
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: var(--post-border-color);
+    
+    background-color: var(--post-bg-color);
+    
+    padding-right: 10px;
+    padding-left: 10px;
+
+    margin-bottom: 5px;
+}
+
+.comment-username {
+    color: var(--post-username-letter);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.comment-username:hover {
+    text-decoration: underline;
+}
+
+.comment-body {
+    color: var(--single-post-body-letter);
+    word-wrap: break-word;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}

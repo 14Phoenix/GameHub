@@ -1,0 +1,238 @@
+/* Original author: Mihajlo Blagojevic 0283/2021 */
+/* Version 1.1. author: Viktor Mitrovic 0296/2021 */
+
+:root {
+    /* Background colors */
+    --bg-color: #1a1a1b;
+
+    /* Log In button colors */
+    --logo-red: #a2170f;
+    --logo-red-button-hover: #73100b;
+    --logo-letter: white;
+
+    /* GameHub header colors */
+    --gamehub-header-letter: white;
+
+    /* Banner colors */
+    --banner-letter: white;
+
+    /* Post area colors */
+    --post-area-border-color: white;
+
+    /* Create post colors */
+    --create-post-letter: white;
+
+    /* Single post colors */
+    --post-bg-color: #1e2123;
+    --post-border-color: #292c30;
+    --post-hover-bg-color: var(--post-border-color);
+
+    
+    --single-post-body-letter: white;
+    --post-title-letter: white;
+    --post-username-letter: white;
+    --post-like-button-letter: white;
+    --post-forum-name-letter: white;
+
+    /* Button area colors */
+
+    --follow-button-hover-bg: #dfdfdf;
+
+    /* Single forum button colors */
+
+    --forum-button-bg-color: var(--post-bg-color);
+    --forum-button-border-color: var(--post-border-color);
+    --forum-button-hover-bg-color: var(--post-hover-bg-color);
+    
+
+    --forum-button-letter: white;
+
+    /* User info colors */
+
+    --user-info-header-letter: #a8a8a8;
+    --user-info-data-letter: white;
+
+    /* Edit button colors */
+    --edit-button-bg: #00a100;
+    --edit-button-hover-bg: #008500;
+    
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.chat-main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.game-name-messages-input-area {
+    /* background-color: violet; */
+    background-image: url("/static/Images/Chat_background_dark_geometry.jpg");
+    /* background-size: 300px 300px; */
+    padding: 0px;
+}
+
+.game-name-area {
+    color: white;
+    background-image: linear-gradient(to right, var(--logo-red), var(--post-bg-color));
+    /* background-color: var(--post-bg-color); */
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 1px;
+    overflow-y: scroll;
+    /* Maybe auto? */
+    padding: 0px 5px 5px 5px;
+}
+
+.message {
+    max-width: 60%;
+    margin-top: 5px;
+}
+
+.my-message {
+    max-width: 60%;
+    margin-top: 5px;
+    align-self: flex-end;
+}
+
+.message .username {
+    display: block;
+    color: #acacac;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.message .username:hover {
+    text-decoration: underline;
+}
+
+.message .body {
+    display: inline-block;
+
+    color: white;
+    background-color: var(--bg-color);
+
+    border-radius: 5px;
+
+    padding: 5px 7px 5px 7px;
+}
+
+.my-message .body {
+    display: inline-block;
+
+    color: white;
+    background-color: #610505;
+
+    border-radius: 5px;
+
+    padding: 5px 7px 5px 7px;
+}
+
+.input-area {
+    display: flex;
+    /* background-color: var(--post-bg-color); */
+    background-image: linear-gradient(to right, var(--logo-red), var(--post-bg-color));
+}
+
+.input-new-message {
+    width: 100%;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.input-box {
+    width: 100%;
+    border-radius: 50px;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    background-color: #33383b;
+    border: none;
+}
+
+.input-box:focus {
+    outline: none;
+}
+
+.send-button {
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 8px;
+}
+
+.send-button:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+.send-icon {
+    fill: none;
+    stroke: white;
+    width: 40px;
+}
+
+.member{
+    margin-bottom: 5px;
+}
+
+.member-area {
+    color: white;
+    background-image: linear-gradient(to left, var(--logo-red), var(--post-bg-color));
+}
+
+.member .profile-picture-link {
+    user-select: none;
+    text-decoration: none;
+}
+
+.member .profile-picture-link svg.profile-icon {
+    fill: none;
+    stroke: white;
+    width: 50px;
+}
+
+.member .profile-link {
+    color: white;
+    text-decoration: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.member .profile-link:hover {
+    text-decoration: underline;
+}
+
+.member .profile-image-for-team-members{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.team-leave-a-team-form {
+    margin: 0;
+    padding: 0;
+}
+
+.team-leave-a-team-button {
+    border: 1px solid;
+    border-color: var(--logo-red);
+    border-radius: 20px;
+    color: var(--post-like-button-letter);
+    background-color: var(--logo-red);
+    padding: 10px 15px 10px 15px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    user-select: none;
+}

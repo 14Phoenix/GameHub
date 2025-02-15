@@ -1,0 +1,83 @@
+/* Author: Nemanja Mićanović 0595/2021 */
+body {
+    background-color: #1a1a1b;
+}
+
+#header {
+    background-color: #2f2f2f;
+    color: #a2170f;
+    border-bottom: 3px solid white;
+    font-family: "Audiowide", sans-serif;
+}
+
+#levaStrana {
+    background-color: #424242;
+    padding-left: 20px;
+    border-right: 3px solid white;
+}
+
+#createButton {
+    background-color: #a2170f;
+    color: white;
+    margin-top: 10px;
+}
+
+#createButton:hover {
+    background-color: #8b110a;
+    color: wheat;
+}
+
+#levaStranaNaslov {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    text-decoration: underline;
+}
+
+#levaStranaOpis {
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+#main {
+    background-color: #424242;
+}
+
+.tour {
+    background-color: #212529;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(253, 213, 137);
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius: 10%;
+    user-select: none;
+}
+
+.tableTour {
+    text-align: center;
+    font-size: 25px;
+}
+
+.tdPad {
+    padding: 0;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+.tour:hover {
+    background-color: #a2170f;
+    color: wheat;
+    border-color: wheat;
+}
+
+.tour:active {
+    color: white;
+}

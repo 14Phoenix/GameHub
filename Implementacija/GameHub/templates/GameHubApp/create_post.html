@@ -1,0 +1,48 @@
+<!-- Author: Viktor Mitrovic 0296/2021 -->
+
+{% extends 'GameHubApp/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Create a post
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/style_header.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_create_post.css' %}" type="text/css">
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'JS/create_post.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+        <div class="row new-post-area justify-content-center">
+
+            <form id="create_post_form" class="shrink-new-post-area col-sm-12" action="{% url 'create_post' forum.idforum %}" method="post">
+                {% csrf_token %}
+                
+                <h2 class="col-sm-12 new-post-headers">
+                    Post on <a href="{% url 'forum' forum.idforum %}">{{ forum.name }}</a>
+                </h2>
+    
+                <h3 class="col-sm-12 new-post-headers">Post title</h3>
+                <input name="title" class="col-sm-12 new-post-title" type="text" required>
+    
+                <h3 id="create_post_body_header" class="col-sm-12 new-post-headers">Post body</h3>
+                <textarea name="body" class="col-sm-12 new-post-body" rows="10"></textarea>
+    
+                <div id="create_post_buttons" class="col-sm-12 post-cancel-button-area">
+                    <button class="new-post-button-post" type="submit">Post</button>
+                    <button id="create_post_cancel" class="new-post-button-cancel" type="button" data-gamehub-forum-url="{% url 'forum' forum.idforum %}">Cancel</button>
+                </div>
+
+            </form>
+            
+        </div>
+    
+    </div>
+{% endblock %}    

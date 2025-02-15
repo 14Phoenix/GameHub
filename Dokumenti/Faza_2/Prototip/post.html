@@ -1,0 +1,320 @@
+<!-- Author: Viktor Mitrovic -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Post example 1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./style_forum.css" type="text/css">
+    <link rel="stylesheet" href="./style_post.css" type="text/css">
+    <link rel="stylesheet" href="./style_header.css" type="text/css">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="container-fluid">
+
+        <!-- Notification modal start (should be removed) -->
+        <div class="modal fade" id="notificationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Notifications</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        You do not have any notifications.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Notification modal end (should be removed) -->
+
+        <nav class="navbar navbar-expand-sm">
+        
+            <a href="./index.html" class="navbar-brand">
+                <img src="./Images/GameHub_Logo.png" alt="GameHub Logo" class="logo">
+            </a>
+
+            <a href="./index.html" class="gamehub-header">
+                <h1>GameHub</h1>
+            </a>
+
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <!-- Added data-bs-toggle and data-bs-target (should be removed) -->
+                    <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#notificationModal">
+                        <svg class="notification-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier_trash" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier_trash" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier_trash">
+                                <path d="M12.02 2.90991C8.70997 2.90991 6.01997 5.59991 6.01997 8.90991V11.7999C6.01997 12.4099 5.75997 13.3399 5.44997 13.8599L4.29997 15.7699C3.58997 16.9499 4.07997 18.2599 5.37997 18.6999C9.68997 20.1399 14.34 20.1399 18.65 18.6999C19.86 18.2999 20.39 16.8699 19.73 15.7699L18.58 13.8599C18.28 13.3399 18.02 12.4099 18.02 11.7999V8.90991C18.02 5.60991 15.32 2.90991 12.02 2.90991Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"></path>
+                                <path d="M13.87 3.19994C13.56 3.10994 13.24 3.03994 12.91 2.99994C11.95 2.87994 11.03 2.94994 10.17 3.19994C10.46 2.45994 11.18 1.93994 12.02 1.93994C12.86 1.93994 13.58 2.45994 13.87 3.19994Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M15.02 19.0601C15.02 20.7101 13.67 22.0601 12.02 22.0601C11.2 22.0601 10.44 21.7201 9.90002 21.1801C9.36002 20.6401 9.02002 19.8801 9.02002 19.0601" stroke="white" stroke-width="1.5" stroke-miterlimit="10"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="./profile.html" class="nav-link">
+                        <svg class="profile-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier_profile" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier_profile" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier_profile">
+                                <path d="M12.12 12.78C12.05 12.77 11.96 12.77 11.88 12.78C10.12 12.72 8.71997 11.28 8.71997 9.50998C8.71997 7.69998 10.18 6.22998 12 6.22998C13.81 6.22998 15.28 7.69998 15.28 9.50998C15.27 11.28 13.88 12.72 12.12 12.78Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M18.74 19.3801C16.96 21.0101 14.6 22.0001 12 22.0001C9.40001 22.0001 7.04001 21.0101 5.26001 19.3801C5.36001 18.4401 5.96001 17.5201 7.03001 16.8001C9.77001 14.9801 14.25 14.9801 16.97 16.8001C18.04 17.5201 18.64 18.4401 18.74 19.3801Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            
+        </nav>
+
+        <hr class="navbar-divider">
+
+    </div>
+
+
+    <div class="container">
+
+        <!-- New Comment Modal -->
+        <div class="modal fade" id="newCommentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">New comment</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <textarea rows="5" style="width: 100%; resize: none;"></textarea>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post area + Button area -->
+        <div class="row">
+
+            
+            
+
+            <!-- Post area -->
+            <div class="col-sm-12 col-lg-9">
+                <div class="row single-post-area">
+
+                    <div class="single-post">
+                        <a href="./forum.html" class="single-post-forum-name">Apex Legends</a>
+                        <br>
+                        <a class="single-post-username" href="./profile.html">user_name_1</a>
+                        <h2 class="single-post-title">Post example 1</h2>
+                        <p class="single-post-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam deleniti dolorum laudantium magnam. Accusamus recusandae ut esse porro labore, aperiam corporis debitis vero rem perspiciatis saepe accusantium voluptates sed adipisci et facere excepturi deleniti a quae quod! Quaerat nemo fugiat iure earum architecto quia officia vero explicabo eligendi. Officiis, excepturi doloremque laborum architecto id odio explicabo hic dolor magnam provident. Nesciunt tenetur similique quibusdam temporibus nihil perspiciatis sapiente beatae voluptatum soluta, dignissimos, quod facilis nulla quae. Beatae vero, quidem in, quia sequi dolor veniam ab modi minima suscipit culpa quam consequuntur, accusantium voluptatum harum earum nihil numquam voluptas dignissimos odio expedita. Eveniet aspernatur beatae velit alias placeat molestiae fuga delectus molestias illum nemo ad, officiis sit similique quasi quos blanditiis voluptatibus eum vel dicta ex corrupti eius! Voluptate explicabo sint, est asperiores qui ipsum aspernatur, culpa debitis perferendis libero magnam amet earum commodi numquam distinctio aliquam? Quis libero quasi in distinctio quidem minima, veritatis perferendis laboriosam nulla reprehenderit, ut eligendi praesentium eos blanditiis, placeat voluptatum unde!
+                        </p>
+
+                        <button class="single-post-like-button">
+                            <svg class="single-post-like-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g>
+                                    <path d="M7.47998 18.35L10.58 20.75C10.98 21.15 11.88 21.35 12.48 21.35H16.28C17.48 21.35 18.78 20.45 19.08 19.25L21.48 11.95C21.98 10.55 21.08 9.34997 19.58 9.34997H15.58C14.98 9.34997 14.48 8.84997 14.58 8.14997L15.08 4.94997C15.28 4.04997 14.68 3.04997 13.78 2.74997C12.98 2.44997 11.98 2.84997 11.58 3.44997L7.47998 9.54997" stroke="white" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                    <path d="M2.38 18.35V8.55002C2.38 7.15002 2.98 6.65002 4.38 6.65002H5.38C6.78 6.65002 7.38 7.15002 7.38 8.55002V18.35C7.38 19.75 6.78 20.25 5.38 20.25H4.38C2.98 20.25 2.38 19.75 2.38 18.35Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="single-post-delete-button">
+                            <svg class="single-post-delete-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g >
+                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M18.85 9.14001L18.2 19.21C18.09 20.78 18 22 15.21 22H8.79002C6.00002 22 5.91002 20.78 5.80002 19.21L5.15002 9.14001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10.33 16.5H13.66" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M9.5 12.5H14.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Leave a comment area -->
+                <div class="leave-a-comment-area">
+                    <button class="leave-a-comment-button" data-bs-toggle="modal" data-bs-target="#newCommentModal">
+                        Leave a comment
+                    </button>
+                </div>
+
+                <div class="row comment-section">
+
+                    <div class="comment">
+                        <a class="comment-username" href="./profile.html">user_name_1</a>
+                        <p class="comment-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis numquam reiciendis eligendi, incidunt doloremque ipsam magnam fugit explicabo? Architecto quibusdam est a mollitia, dignissimos molestiae.
+                        </p>
+
+                        <button class="single-post-like-button">
+                            <svg class="single-post-liked-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g>
+                                    <path d="M7.47998 18.35L10.58 20.75C10.98 21.15 11.88 21.35 12.48 21.35H16.28C17.48 21.35 18.78 20.45 19.08 19.25L21.48 11.95C21.98 10.55 21.08 9.34997 19.58 9.34997H15.58C14.98 9.34997 14.48 8.84997 14.58 8.14997L15.08 4.94997C15.28 4.04997 14.68 3.04997 13.78 2.74997C12.98 2.44997 11.98 2.84997 11.58 3.44997L7.47998 9.54997" stroke="transparent" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                    <path d="M2.38 18.35V8.55002C2.38 7.15002 2.98 6.65002 4.38 6.65002H5.38C6.78 6.65002 7.38 7.15002 7.38 8.55002V18.35C7.38 19.75 6.78 20.25 5.38 20.25H4.38C2.98 20.25 2.38 19.75 2.38 18.35Z" stroke="transparent" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="single-post-delete-button">
+                            <svg class="single-post-delete-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g >
+                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M18.85 9.14001L18.2 19.21C18.09 20.78 18 22 15.21 22H8.79002C6.00002 22 5.91002 20.78 5.80002 19.21L5.15002 9.14001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10.33 16.5H13.66" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M9.5 12.5H14.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="comment">
+                        <a class="comment-username" href="./profile.html">user_name_2</a>
+                        <p class="comment-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis numquam reiciendis eligendi, incidunt doloremque ipsam magnam fugit explicabo? Architecto quibusdam est a mollitia, dignissimos molestiae.
+                        </p>
+
+                        <button class="single-post-like-button">
+                            <svg class="single-post-like-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g>
+                                    <path d="M7.47998 18.35L10.58 20.75C10.98 21.15 11.88 21.35 12.48 21.35H16.28C17.48 21.35 18.78 20.45 19.08 19.25L21.48 11.95C21.98 10.55 21.08 9.34997 19.58 9.34997H15.58C14.98 9.34997 14.48 8.84997 14.58 8.14997L15.08 4.94997C15.28 4.04997 14.68 3.04997 13.78 2.74997C12.98 2.44997 11.98 2.84997 11.58 3.44997L7.47998 9.54997" stroke="white" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                    <path d="M2.38 18.35V8.55002C2.38 7.15002 2.98 6.65002 4.38 6.65002H5.38C6.78 6.65002 7.38 7.15002 7.38 8.55002V18.35C7.38 19.75 6.78 20.25 5.38 20.25H4.38C2.98 20.25 2.38 19.75 2.38 18.35Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="single-post-delete-button">
+                            <svg class="single-post-delete-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g >
+                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M18.85 9.14001L18.2 19.21C18.09 20.78 18 22 15.21 22H8.79002C6.00002 22 5.91002 20.78 5.80002 19.21L5.15002 9.14001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10.33 16.5H13.66" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M9.5 12.5H14.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="comment">
+                        <a class="comment-username" href="./profile.html">user_name_1</a>
+                        <p class="comment-body">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus asperiores iste maiores, explicabo laborum deserunt ipsam exercitationem, nisi, soluta tempore ullam quasi earum quam doloribus facilis odit quibusdam dignissimos veritatis obcaecati eos voluptate. Accusantium suscipit eius voluptas nostrum perspiciatis? Dolore quos deleniti officia atque. A, vero similique. Iste, aut! Tempore perspiciatis porro quasi fugiat explicabo modi sequi sed pariatur cupiditate libero. Corrupti at enim id aperiam, est recusandae eveniet omnis, aliquam earum molestias quod? Laudantium officiis natus labore, perspiciatis, voluptate molestiae magni aperiam exercitationem laborum odit maxime doloremque, harum veritatis commodi eaque. Accusantium magnam quos porro! Doloremque, culpa rem! Quasi?
+                        </p>
+
+                        <button class="single-post-like-button">
+                            <svg class="single-post-like-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g>
+                                    <path d="M7.47998 18.35L10.58 20.75C10.98 21.15 11.88 21.35 12.48 21.35H16.28C17.48 21.35 18.78 20.45 19.08 19.25L21.48 11.95C21.98 10.55 21.08 9.34997 19.58 9.34997H15.58C14.98 9.34997 14.48 8.84997 14.58 8.14997L15.08 4.94997C15.28 4.04997 14.68 3.04997 13.78 2.74997C12.98 2.44997 11.98 2.84997 11.58 3.44997L7.47998 9.54997" stroke="white" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                    <path d="M2.38 18.35V8.55002C2.38 7.15002 2.98 6.65002 4.38 6.65002H5.38C6.78 6.65002 7.38 7.15002 7.38 8.55002V18.35C7.38 19.75 6.78 20.25 5.38 20.25H4.38C2.98 20.25 2.38 19.75 2.38 18.35Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="single-post-delete-button">
+                            <svg class="single-post-delete-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g >
+                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M18.85 9.14001L18.2 19.21C18.09 20.78 18 22 15.21 22H8.79002C6.00002 22 5.91002 20.78 5.80002 19.21L5.15002 9.14001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10.33 16.5H13.66" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M9.5 12.5H14.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="comment">
+                        <a class="comment-username" href="./profile.html">user_name_2</a>
+                        <p class="comment-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam soluta consequuntur alias ipsam. Architecto placeat et sit, earum pariatur voluptatem?
+                        </p>
+
+                        <button class="single-post-like-button">
+                            <svg class="single-post-like-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g>
+                                    <path d="M7.47998 18.35L10.58 20.75C10.98 21.15 11.88 21.35 12.48 21.35H16.28C17.48 21.35 18.78 20.45 19.08 19.25L21.48 11.95C21.98 10.55 21.08 9.34997 19.58 9.34997H15.58C14.98 9.34997 14.48 8.84997 14.58 8.14997L15.08 4.94997C15.28 4.04997 14.68 3.04997 13.78 2.74997C12.98 2.44997 11.98 2.84997 11.58 3.44997L7.47998 9.54997" stroke="white" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                    <path d="M2.38 18.35V8.55002C2.38 7.15002 2.98 6.65002 4.38 6.65002H5.38C6.78 6.65002 7.38 7.15002 7.38 8.55002V18.35C7.38 19.75 6.78 20.25 5.38 20.25H4.38C2.98 20.25 2.38 19.75 2.38 18.35Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="single-post-delete-button">
+                            <svg class="single-post-delete-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g >
+                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M18.85 9.14001L18.2 19.21C18.09 20.78 18 22 15.21 22H8.79002C6.00002 22 5.91002 20.78 5.80002 19.21L5.15002 9.14001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10.33 16.5H13.66" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M9.5 12.5H14.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Button area -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="row forum-button-area sticky-top">
+
+                    <a class="forum-button" href="./find-a-team.html">Find a team</a>
+
+                    <a class="forum-button" href="./create-a-team.html">Create a team</a>
+
+                    <a class="forum-button" href="./tim.html">My team</a>
+
+                    <a class="forum-button" href="./Stranica za turnire.html">Tournaments</a>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

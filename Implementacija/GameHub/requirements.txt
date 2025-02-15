@@ -1,0 +1,6 @@
+django
+mysqlclient
+channels[daphne]
+channels_redis
+pillow
+selenium

@@ -1,0 +1,39 @@
+<!-- Author: Tadija Goljic 0272/2021 -->
+{% extends 'GameHubApp/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/style_header.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_sign_in_sign_up.css' %}" type="text/css">
+{% endblock %}
+
+{% block title %}
+    Sign in
+{% endblock %}
+    
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <h2 class="text-center white-text">Sign in to GameHub</h2> <br>
+            <div class="justify-content-center display-flex">
+                <div id="sign-in-div" class="text-center mx-auto col-sm-12">
+                    <form action="/sign-in" method="post" style="width: 100%;">
+                        {% csrf_token %}
+                        <div class="row text-start white-text">
+                            <label for="username-field">Username:</label> <br>
+                        </div>
+                        <input id="username-field" name="username-field" class="sign-in-field" type="text" placeholder="username" style="width: 100%;"> <br>
+                        <div class="row text-start white-text">
+                            <label for="password-field">Password:</label> <br>
+                        </div>
+                        <input id="password-field" name="password-field" class="sign-in-field" type="password" placeholder="password" style="width: 100%;"> <br>
+                        <input id="submit-button" class="sign-in-field" type="submit" value="Sign in">
+                        <button id="cancel-button" type="button" class="sign-in-field" onclick="location.href='forgot-password'">Forgot password?</button>
+                    </form>
+                </div>
+            </div>
+            <p class="text-center messages">{{ message }}</p>
+        </div>
+    </div>
+{% endblock %}

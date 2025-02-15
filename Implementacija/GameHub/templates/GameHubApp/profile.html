@@ -1,0 +1,168 @@
+<!-- Author: Viktor Mitrovic 0296/2021 -->
+<!-- Version 1.1 author: Tadija Goljic 0272/2021 -->
+{% extends 'GameHubApp/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/style_header.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_profile.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_popup.css' %}" type="text/css">
+{% endblock %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'JS/popup.js' %}"></script>
+    <script src="{% static 'JS/change_profile.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="popup" data-gamehub-popup="edit-about-section-popup">
+        <div class="popup-body">
+            <div class="popup-header">
+                <div class="popup-title">
+                    Edit about section
+                </div>
+                <div>
+                    <button id="close_x_add_moderator_button" class="popup-close" data-gamehub-popup-close="edit-about-section-popup">
+                        &times;
+                    </button>
+                </div>
+            </div>
+            <textarea id="new-about-section-area" cols="50" rows="5" style="resize: none">{{ profile_about_section }}</textarea>
+            <div id="add_moderator_buttons" class="popup-form-buttons">
+                <button id="close_cancel_edit_about_section_button" type="button" class="popup-form-button cancel" data-gamehub-popup-close="edit-about-section-popup">
+                    Cancel
+                </button>
+                <button id="change_about_section_button" class="popup-form-button confirm" onclick="changeAboutSectionField()" data-gamehub-popup-close="edit-about-section-popup">
+                    Change
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="popup" data-gamehub-popup="sign-out-popup">
+        <div class="popup-body">
+            <div class="popup-header">
+                <div class="popup-title">
+                    Sign out
+                </div>
+                <div>
+                    <button id="close_x_add_moderator_button" class="popup-close" data-gamehub-popup-close="sign-out-popup">
+                        &times;
+                    </button>
+                </div>
+            </div>
+            <form id="form_sign_out" class="popup-content" method="post" action="/logout-user">
+                {% csrf_token %}
+                <div id="add_moderator_buttons" class="popup-form-buttons">
+                    <button id="close_cancel_sign_out_button" type="button" class="popup-form-button cancel" data-gamehub-popup-close="sign-out-popup">
+                        Cancel
+                    </button>
+                    <input class="popup-form-button confirm" type="submit" value="Sign out">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="popup" data-gamehub-popup="delete-account-popup">
+        <div class="popup-body">
+            <div class="popup-header">
+                <div class="popup-title">
+                    Delete account
+                </div>
+                <div>
+                    <button id="close_x_add_moderator_button" class="popup-close" data-gamehub-popup-close="delete-account-popup">
+                        &times;
+                    </button>
+                </div>
+            </div>
+            <form id="form_delete_profile" class="popup-content" method="post" action="/delete-profile/{{ id_user }}">
+                {% csrf_token %}
+                <label for="password-delete-account">
+                    Password: 
+                </label>
+                <input id="password-delete-account" name="password-delete-account" type="password" placeholder="password">
+                <div id="add_moderator_buttons" class="popup-form-buttons">
+                    <button id="close_cancel_delete_profile_button" type="button" class="popup-form-button cancel" data-gamehub-popup-close="delete-account-popup">
+                        Cancel
+                    </button>
+                    <button class="popup-form-button confirm">
+                        Delete
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <form enctype="multipart/form-data" action="/save-profile-changes/{{ id_user }}" method="post" style="display: flex; justify-content: space-between; margin-top: 5px;">
+        {% csrf_token %}
+        <div class="container">
+            <div id="picture_div" class="d-flex align-items-stretch">
+                {% if user_profile_picture.b64 is None %}
+
+                    <svg id="profile_picture_placeholder" class="profile-picture-placeholder" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier_profile_picture_placeholder" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier_profile_picture_placeholder" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier_profile_picture_placeholder">
+                            <path d="M12.12 12.78C12.05 12.77 11.96 12.77 11.88 12.78C10.12 12.72 8.71997 11.28 8.71997 9.50998C8.71997 7.69998 10.18 6.22998 12 6.22998C13.81 6.22998 15.28 7.69998 15.28 9.50998C15.27 11.28 13.88 12.72 12.12 12.78Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M18.74 19.3801C16.96 21.0101 14.6 22.0001 12 22.0001C9.40001 22.0001 7.04001 21.0101 5.26001 19.3801C5.36001 18.4401 5.96001 17.5201 7.03001 16.8001C9.77001 14.9801 14.25 14.9801 16.97 16.8001C18.04 17.5201 18.64 18.4401 18.74 19.3801Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+
+                {% else %}
+
+                    <img id="profile_picture_initial_load" class="user-profile-picture" src="data:image/{{ user_profile_picture.ext }};base64,{{ user_profile_picture.b64 }}" alt="Profile picture">
+
+                {% endif %}
+
+                <div class="user-info-data">
+                    <h5 class="user-info-header">Username:</h5>
+                    <h4 class="user-info-data-username">{{ profile_username }}</h4>
+                    <h5 class="user-info-header">about:</h5>
+                    <textarea id="profile_about_section" name="profile_about_section" class="user-info-data-about" rows="4" readonly>{{ profile_about_section }}</textarea>
+                </div>
+            </div>
+            {% if can_edit == True %}
+                <div class="row" style="margin-top: 10px">
+                    <div class="d-flex justify-content-between">
+                        <div class="form-edit-section">
+                            <input name="profile_picture" accept="image/*" type="file" id="profile_picture" style="visibility: hidden; width: 0px;"> 
+                            <label class="edit-button" for="profile_picture">
+                                New profile picture
+                            </label>
+                            <button class="edit-button" type="button" data-gamehub-popup-button="edit-about-section-popup">
+                                Edit about section
+                            </button>
+                            <button class="edit-button" type="button" onclick="location.href='{% url 'change_password' id_user %}'">
+                                Change password
+                            </button>
+                            <button class="delete-account-button" type="button" data-gamehub-popup-button="delete-account-popup">
+                                Delete account
+                            </button>
+                            <button class="sign-out-button" type="button" data-gamehub-popup-button="sign-out-popup">
+                                Sign out
+                            </button>
+                        </div>
+                        <div class="form-save-cancel-section justify-content-end">
+                            <input class="cancel-button" type="reset" value="Cancel" onclick="location.href = '/'">
+                            <input class="save-button" type="submit" style="float: right;" value="Save changes">
+                        </div>
+                    </div>
+                </div>
+            {% elif can_delete %}
+                <div class="row">
+                    <div class="form-edit-section">
+                        <button class="delete-account-button" type="button" data-gamehub-popup-button="delete-account-popup">
+                            Delete account
+                        </button>
+                    </div>
+                </div>
+            {% endif %}
+            <br>
+            <p class="text-center messages">{{ message }}</p>
+            <p class="text-center messages">{{ delete_message }}</p>
+        </div>
+    </form>
+{% endblock %}

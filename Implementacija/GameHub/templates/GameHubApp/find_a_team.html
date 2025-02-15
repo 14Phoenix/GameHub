@@ -1,0 +1,85 @@
+<!-- Author: Tadija Goljic 0272/2021 -->
+{% extends 'GameHubApp/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/style_header.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_sign_in_sign_up.css' %}" type="/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_create_a_team.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_popup.css' %}" type="text/css">
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'JS/find_a_team.js' %}"></script>
+    <script src="{% static 'JS/popup.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+    Find a team
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 bgMain">
+                <h1 class="game-team">Find a team for {{ forum_name }}</h1>
+                <div id="teams-div">
+                    {% for i, name, leader, players, joined, id_team in teams %}    
+                        <div id="container-of-team-{{ i }}" class="container-of-team">
+                            <div id="team-name-{{ i }}" class="item text-center">{{ name }}</div>
+                            <div class="item container flex-column">
+                                <div>Team leader:</div>
+                                <div id="team-leader-{{ i }}">{{ leader }}</div>
+                            </div>
+                            <div class="item container flex-column">
+                                <div>Number of players:</div>
+                                <div id="team-players-{{ i }}">{{ joined }}/{{ players }}</div>
+                            </div>
+                            <div id="join-button-{{ i }}" class="join-item">
+                                {% if already_team_member %}
+                                    <button class="join-button" data-gamehub-popup-button="leave_team">Request join</button>
+                                {% else %}
+                                    <button class="join-button" onclick="location.href='{% url 'request_join' id_forum id_team %}'">Request join</button>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-sm-3 filterMain">
+                <h2 class="filterText">Filters:</h2>
+                <label for="notFull" class="labelFilter">
+                    Not full
+                </label>
+                <input id="notFull" name="notFull" class="form-check-input" type="checkbox">
+                <br>
+                <label class="labelFilter">
+                    Search by name:
+                </label>
+                <input id="search-field" class="form-control findTeamField" type="text" placeholder="Team name...">
+            </div>
+        </div>
+        <div class="popup" data-gamehub-popup="leave_team">
+            <div class="popup-body">
+                <div class="popup-header">
+                    <div class="popup-title">
+                        Leave a team
+                    </div>
+                    <div>
+                        <button class="popup-close" data-gamehub-popup-close="leave_team">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+                <form id="form_leave_team" class="popup-content" method="post" action="{% url 'leave_a_team' id_forum %}">
+                    {% csrf_token %}
+                    <div class="popup-form-buttons">
+                        <button type="button" class="popup-form-button cancel" data-gamehub-popup-close="leave_team">Cancel</button>
+                        <button class="popup-form-button confirm" data-gamehub-popup-close="leave_team">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

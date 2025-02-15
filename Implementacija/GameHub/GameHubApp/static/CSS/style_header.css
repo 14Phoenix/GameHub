@@ -1,0 +1,106 @@
+/* Author: Viktor Mitrovic 0296/2021 */
+
+:root {
+    /* Background colors */
+    --bg-color: #1a1a1b;
+
+    /* Log In button colors */
+    --logo-red: #a2170f;
+    --logo-red-button-hover: #73100b;
+    --logo-letter: white;
+
+    /* GameHub header colors */
+    --gamehub-header-letter: white;
+
+    /* Banner colors */
+    --banner-letter: white;
+
+    /* Post area colors */
+    --post-area-border-color: white;
+
+    /* Create post colors */
+    --create-post-letter: white;
+
+    /* Single post colors */
+    --post-bg-color: #1e2123;
+    --post-border-color: #292c30;
+    --post-hover-bg-color: var(--post-border-color);
+
+    --post-body-letter: #878787;
+    --post-title-letter: white;
+    --post-username-letter: white;
+    --post-like-button-letter: white;
+
+    /* Button area colors */
+
+
+    /* Single forum button colors */
+
+    --forum-button-bg-color: var(--post-bg-color);
+    --forum-button-border-color: var(--post-border-color);
+    --forum-button-hover-bg-color: var(--post-hover-bg-color);
+    
+
+    --forum-button-letter: white;
+}
+
+.logo {
+    height: 90px;
+
+    user-select: none;
+}
+
+.gamehub-header {
+    color: var(--gamehub-header-letter);
+
+    font-family: "Audiowide", sans-serif;
+    text-decoration: none;
+
+    user-select: none;
+}
+
+svg.profile-icon {
+    fill: none;
+    stroke: white;
+    width: 40px;
+}
+
+img.header-profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+svg.notification-icon {
+    fill: none;
+    stroke: white;
+    width: 25px;
+}
+
+hr.navbar-divider {
+    color: white;
+
+    width: 99%;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.header-sign-in-button {
+    border: 1px solid;
+    border-color: var(--logo-red);
+    border-radius: 20px;
+    color: var(--post-like-button-letter);
+    background-color: var(--logo-red);
+    padding: 10px 15px 10px 15px;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+    user-select: none;
+}
+
+.header-sign-in-button:hover {
+    background-color: var(--logo-red-button-hover);
+}

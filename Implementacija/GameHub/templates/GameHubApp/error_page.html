@@ -1,0 +1,29 @@
+{# Authors: #}
+{# Tadija Goljic 0272/2021 #}
+{# Viktor Mitrovic 0296/2021  #}
+{% extends 'GameHubApp/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    GameHub {{ status_code }} {{ status_message }}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/style_header.css' %}" type='text/css'>
+{% endblock %}
+
+{% block content %}
+    <p class="text-center">{{ status_code }} {{ status_message }}</p>  
+    <p class="text-center">{{ message }}</p>
+    <style>
+        p {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+        body {
+            background-color: #1a1a1b;
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,74 @@
+<!-- Author: Mihajlo Blagojevic 0283/2021 -->
+{% extends 'GameHubApp/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'CSS/style_create_forum.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'CSS/style_header.css' %}" type="text/css">
+{% endblock %}
+
+{% block Title %}
+    Forum creation
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <div class="row div_iznad_breadcrumba">
+            <div class="col-sm-12 div_iznad_breadcrumba">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'index' %}">Forum</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'create_forum' %}">Create forum</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="row div_iznad_kreiranje_foruma">
+            <div class="offset-xl-4 offset-lg-3 offset-md-2 offset-1 col-xl-4 col-lg-6 col-8 forma">
+                <div class="p_prikaz_teksta mb-5 text-white bg-dark">
+                    <p class="p-2">Create forum</p>
+                </div>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="{{ form.forum_name.id_for_label }}"><b>Name</b></label>
+                    {{ form.forum_name }}
+                    {% if err_message_name != '-1' %}
+                        <p class="paragraf_error">{{ err_message_name }}</p>
+                    {% else %}
+                        <br>
+                    {% endif %}
+                    <label for="{{ form.cover_image.id_for_label }}"><b>Select a cover image</b></label>
+                    {{ form.cover_image }}
+                    <p class="label_gray_color">* Pref: 150px x 200px </p>
+                    {% if err_extension_cover != '-1' %}
+                        <p class="paragraf_error">{{ err_extension_cover }}</p>
+                    {% endif %}
+                    <label for="{{ form.banner_image.id_for_label }}"><b>Choose an image for the banner</b></label>
+                    {{ form.banner_image }}
+                    <p class="label_gray_color">* Pref: 1300px x 400px </p>
+                    {% if err_extension_banner != '-1' %}
+                        <p class="paragraf_error">{{ err_extension_banner }}</p>
+                    {% endif %}
+                    <label for="{{ form.description.id_for_label }}"><b>Description</b></label>
+                    {{ form.description }}
+                    {% if err_message_description != '-1' %}
+                        <p class="paragraf_error">{{ err_message_description }}</p>
+                    {% else %}
+                        <br>
+                    {% endif %}
+                    <label for="{{ form.possible_number_of_players.id_for_label }}"><b>Possible number of players</b></label>
+                    {{ form.possible_number_of_players }}
+                    <p class="label_gray_color">* Enter the possible number of players separated by a comma <br> * '/' for singleplayer games</p>
+                    {% if err_message_possible_number_of_players != '-1' %}
+                        <p class="paragraf_error">{{ err_message_possible_number_of_players }}</p>
+                    {% else %}
+                        <br>
+                    {% endif %}
+                    <br>
+                    <input type="submit" class="dugme_u_formi btn btn-block mb-5 text-white bg-secondary" value="Create">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,93 @@
+/* Author: Viktor Mitrovic 0296/2021 */
+
+:root {
+    /* Popup colors */
+    --popup-letter-color: white;
+    --popup-bg-color: #303536;
+    --logo-red: #a2170f;
+    --logo-red-button-hover: #73100b;
+    --cancel-button-hover-bg: #dfdfdf;
+}
+
+.popup {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-body {
+    padding: 20px;
+    min-width: 300px;
+    border-radius: 10px;
+    color: var(--popup-letter-color);
+    background-color: var(--popup-bg-color);
+
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-title {
+    font-size: large;
+}
+
+.popup-close {
+    color: white;
+    font-size: x-large;
+    line-height: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.popup-form-buttons {
+    margin-top: 5px;
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+
+.popup-form-button {
+    border: 1px solid;
+    border-radius: 20px;
+
+    padding: 10px 15px 10px 15px;
+    font-size: 15px;
+}
+
+.cancel {
+    color: var(--logo-red);
+    background-color: white;
+    border-color: white;
+}
+
+.cancel:hover {
+    background-color: var(--cancel-button-hover-bg);
+}
+
+.confirm {
+    color: white;
+    background-color: var(--logo-red);
+    border-color: var(--logo-red);
+}
+
+.confirm:hover {
+    background-color: var(--logo-red-button-hover);
+}
